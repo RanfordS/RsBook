@@ -2,9 +2,24 @@
 
 %% Packages
 
+\usepackage{geometry}
+\geometry{%
+    a4paper,
+    top=1in,
+    bottom=1in,
+    left=1in,
+    right=1in,
+    %bindingoffset=5mm
+}
+
 % Font
+\usepackage{fontspec}
+    \DeclareTextCommandDefault{\nobreakspace}{\leavevmode\nobreak\ }
 \usepackage{newpxtext}
 \usepackage[euler-digits,euler-hat-accent]{eulervm}
+
+\newfontfamily\fontcaudex{Caudex}%-Regular}
+\newcommand{\textcaudex}[1]{{\fontcaudex #1}}
 
 % Mathematics
 \usepackage{amsmath}
@@ -18,6 +33,7 @@
 
 % Code
 \usepackage[cache=false]{minted}
+\usepackage{listings}
 
 % Graphics
 \usepackage{graphicx}
@@ -32,7 +48,7 @@
 \usepackage{xcolor}
 
 % Tables of Contents
-\usepackage{tocloft}
+%\usepackage{tocloft}
 %\usepackage{morewrites}
 
 % Hyperlinks
@@ -85,18 +101,23 @@
 
 % Page tools
 
+\newcommand{\blankpage}{%
+    \thispagestyle{empty}
+    ~\newpage
+}
+
 \newcommand{\newpagerecto}{%
     \newpage
     \ifodd\value{page}
     \else
-        ~\newpage
+        \blankpage
     \fi
 }
 
 \newcommand{\newpageverso}{%
     \newpage
     \ifodd\value{page}
-        ~\newpage
+        \blankpage
     \else
     \fi
 }
@@ -117,15 +138,90 @@
 \renewcommand{\theRvolume}{\Roman{Rvolume}}
 \renewcommand{\theRchapter}{\arabic{Rchapter}}
 
-%% End
+\newcommand{\Rtitlepage}[4]{%
+    \thispagestyle{empty}
+  \vspace*{\fill}
+    ~
+  \vspace*{\fill}
+    \begin{center}
+        {\large\textbf{#1}}\\
+        \rule[1ex]{\textwidth}{1pt}\\
+        {\Huge\textbf{#2}}\\
+        \rule[1ex]{\textwidth}{1pt}\\
+        {\large\textbf{#3}}
+    \end{center}
+  \vspace*{\fill}
+        #4
+  \vspace*{\fill}
+    ~
+  \vspace*{\fill}
+    ~
+  \vspace*{\fill}
+    \newpage
+}
 
-%\newlistof{tmps}{tmp}{TMP}
+%% End
+\usepackage{enumitem}
+
+\usepackage{layout}
+\usepackage{lipsum}
+
+\newcommand{\Rsamplefox}{The~quick~brown~fox~jumped~over~the~lazy~dog}
+\newcommand{\Rsampleupp}{ABCDEFGHIJKLMNOPQRSTUVWXYZ}
+\newcommand{\Rsamplelow}{abcdefghijklmnopqrstuvwxyz}
+\newcommand{\Rsamplenum}{0123456789}
+\newcommand{\Rsampleall}{\Rsamplefox\\\Rsampleupp\\\Rsamplelow\\\Rsamplenum}
 
 \newwrite\tempfile
 
+%% TESTING GROUND
+
 \begin{document}
+
+\Rtitlepage{Alexander J. Johnson}{R's Book}{Ranford Skyline's Book Template}{%
+    Fully customised document template including:
+    \begin{itemize}[label=$\cdot$,topsep=0pt]
+        \item Custom document hierarchy: book, part, chapter, section,
+            subsection.
+        \item Custom tables of contents.
+        \item .
+    \end{itemize}
+}
+
+\layout
+
 \setcounter{Rvolume}{1}
 \renewcommand{\Rcurrentchapter}{The Testing Ground}
+
+\textbf{Caudex} - \textcaudex{\Rsampleall}
+
+\textbf{Standard} - \Rsampleall
+
+\textbf{Italics} - \textit{\Rsampleall}
+
+\textbf{Bold} - \textbf{\Rsampleall}
+
+\textbf{Bold Italics} - \textbf{\textit{\Rsampleall}}
+
+\textbf{Typewriter} - \texttt{\Rsampleall}
+
+\textbf{Small Caps} - \textsc{\Rsampleall}
+
+\textbf{Math Mode} - $\Rsampleall$
+
+\textbf{Math Calligraphic} - $\mathcal{\Rsampleupp}$
+
+\textbf{Math Backboard} - $\mathbb{\Rsampleupp}$
+
+\textbf{Math Fraktur} - $\mathfrak{\Rsamplefox}$\\$\mathfrak{\Rsampleupp}$\\%
+$\mathfrak{\Rsamplelow}$\\$\mathfrak{\Rsamplenum}$
+
+
+\newpage
+
+%\textit{wund\textbf{\underline{\u{V}}}de}
+
+\lipsum[1]
 
 \newcounter{alpha}
 \newcounter{gamma}
@@ -136,13 +232,13 @@
     False
 \fi
 
-%\listoftmps
 
 \newcommand{\what}{why?}
 \protect\input{RSkylToC.tex}
 
 \ifdefined\RSKYLTOCINC
     The RSkylToC.tex file was complete
+    \lstinputlisting{RSkylToC.tex}
 \else
     RSkylToc.tex not marked, first pass?
 \fi
@@ -154,15 +250,6 @@ Hello World!
 
 \TODO{This bit}
 \HIDE{This other bit}
-
-%\addcontentsline{tmp}{0}{\protect\numberline{1}Alpha\hfill}
-eps
-
-%\addcontentsline{tmp}{0}{\protect\numberline{2}Beta\hfill}
-upon
-
-%\addcontentsline{tmp}{0}{\protect\numberline{3}Gamma\hfill}
-sai
 
 \renewcommand{\what}{what?}
 \newcommand{\What}{\protect\what}
