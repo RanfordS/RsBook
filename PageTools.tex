@@ -1,0 +1,24 @@
+%% Page tools
+
+\newcommand{\blankpage}{%
+    \thispagestyle{empty}
+    ~\newpage
+}
+
+\newcommand{\newpagerecto}{%
+    \newpage
+    \ifodd\value{page}
+    \else
+        \blankpage
+    \fi
+}
+
+\newcommand{\newpageverso}{%
+    \newpage
+    \ifodd\value{page}
+        \blankpage
+    \else
+    \fi
+}
+
+%% End

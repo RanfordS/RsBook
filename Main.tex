@@ -1,0 +1,107 @@
+\input{Header.tex}
+\usepackage{enumitem}
+
+\usepackage{layout}
+\usepackage{lipsum}
+
+\newcommand{\Rsamplefox}{The~quick~brown~fox~jumped~over~the~lazy~dog}
+\newcommand{\Rsampleupp}{ABCDEFGHIJKLMNOPQRSTUVWXYZ}
+\newcommand{\Rsamplelow}{abcdefghijklmnopqrstuvwxyz}
+\newcommand{\Rsamplenum}{0123456789}
+\newcommand{\Rsampleall}{\Rsamplefox\\\Rsampleupp\\\Rsamplelow\\\Rsamplenum}
+
+\newwrite\tempfile
+
+%% TESTING GROUND
+
+\begin{document}
+
+\Rtitlepage{Alexander J. Johnson}{R's Book}{Ranford Skyline's Book Template}{%
+    Fully customised document template including:
+    \begin{itemize}[label=$\cdot$,topsep=0pt]
+        \item Custom document hierarchy: book, part, chapter, section,
+            subsection.
+        \item Custom tables of contents.
+        \item Some other stuff.
+    \end{itemize}
+}
+
+\layout
+
+\setcounter{Rvolume}{1}
+\renewcommand{\Rcurrentchapter}{The Testing Ground}
+
+\textbf{Standard} - \Rsampleall
+
+\textbf{Italics} - \textit{\Rsampleall}
+
+\textbf{Bold} - \textbf{\Rsampleall}
+
+\textbf{Bold Italics} - \textbf{\textit{\Rsampleall}}
+
+\textbf{Typewriter} - \texttt{\Rsampleall}
+
+\textbf{Small Caps} - \textsc{\Rsampleall}
+
+\textbf{Math Mode} - $\Rsampleall$
+
+\textbf{Math Calligraphic} - $\mathcal{\Rsampleupp}$
+
+\textbf{Math Backboard} - $\mathbb{\Rsampleupp}$
+
+\textbf{Math Fraktur} - $\mathfrak{\Rsamplefox}$\\$\mathfrak{\Rsampleupp}$\\%
+$\mathfrak{\Rsamplelow}$\\$\mathfrak{\Rsamplenum}$
+
+
+\newpage
+
+%\textit{wund\textbf{\underline{\u{V}}}de}
+
+\lipsum[1]
+
+\newcounter{alpha}
+\newcounter{gamma}
+\setcounter{gamma}{1}
+\ifnum\value{alpha}=\value{gamma}
+    True
+\else
+    False
+\fi
+
+
+\newcommand{\what}{why?}
+\protect\input{RSkylToC.tex}
+
+\ifdefined\RSKYLTOCINC
+    The RSkylToC.tex file was complete
+    \lstinputlisting{RSkylToC.tex}
+\else
+    RSkylToc.tex not marked, first pass?
+\fi
+
+Hello World!
+\begin{align*}
+    y_j &= \xi^j
+\end{align*}
+
+\TODO{This bit}
+\HIDE{This other bit}
+
+\renewcommand{\what}{what?}
+\newcommand{\What}{\protect\what}
+
+\immediate\openout\tempfile=RSkylToC.tex
+\immediate\write\tempfile{\noexpand\newcommand{\noexpand\RSKYLTOCINC}{}}
+\immediate\write\tempfile{this is interesting}
+\immediate\write\tempfile{}
+\immediate\write\tempfile{this is also interesting}
+\immediate\write\tempfile{\noexpand\what{} \what{} \noexpand\what{}}
+\immediate\write\tempfile{\noexpand\textbf{\noexpand\textit{'cause foo}}}
+\immediate\closeout\tempfile
+
+\newpagerecto
+Hi, Beans!
+\newpageverso
+Go away\dots
+
+\end{document}

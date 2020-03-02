@@ -1,0 +1,22 @@
+% Header settings
+
+\newcounter{Rsubpage}
+\newcommand{\Rcalcsubpage}{%
+    \setcounter{Rsubpage}{\value{page}-\value{Rchapterstart}}
+}
+
+\fancypagestyle{Rmain}{%
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{1pt}
+    \renewcommand{\footrulewidth}{1pt}
+    \setlength{\headheight}{14pt}
+    %
+    \lhead{\Roman{Rvolume}:\arabic{Rchapter}}
+    \chead{\textbf{\Rcurrentchapter}}
+    \rhead{\Rcalcsubpage\arabic{Rsubpage}}
+    %
+    \cfoot{\arabic{page}}
+}
+\pagestyle{Rmain}
+
+%% End

@@ -1,0 +1,16 @@
+%% Error tools
+
+\newcounter{UNDEFerr}
+\newcommand{\UNDEF}{%
+    \stepcounter{UNDEFerr}
+    \PackageWarning{UNDEF}{Use of undefined command (\arabic{UNDEFerr})}
+    \underline{\textbf{UNDEF \#\arabic{UNDEFerr}}}
+}
+\newcommand{\HIDE}[1]{%
+    \PackageWarning{HIDE}{Hidden text, page \arabic{page},}
+}
+\newcommand{\TODO}[1]{%
+    \texttt{TODO}: \textit{#1}\PackageWarning{TODO}{"#1", page \arabic{page},}
+}
+
+%% End

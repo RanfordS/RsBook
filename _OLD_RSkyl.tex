@@ -13,13 +13,8 @@
 }
 
 % Font
-\usepackage{fontspec}
-    \DeclareTextCommandDefault{\nobreakspace}{\leavevmode\nobreak\ }
 \usepackage{newpxtext}
 \usepackage[euler-digits,euler-hat-accent]{eulervm}
-
-\newfontfamily\fontcaudex{Caudex}%-Regular}
-\newcommand{\textcaudex}[1]{{\fontcaudex #1}}
 
 % Mathematics
 \usepackage{amsmath}
@@ -184,7 +179,7 @@
         \item Custom document hierarchy: book, part, chapter, section,
             subsection.
         \item Custom tables of contents.
-        \item .
+        \item Some other stuff.
     \end{itemize}
 }
 
@@ -192,8 +187,6 @@
 
 \setcounter{Rvolume}{1}
 \renewcommand{\Rcurrentchapter}{The Testing Ground}
-
-\textbf{Caudex} - \textcaudex{\Rsampleall}
 
 \textbf{Standard} - \Rsampleall
 

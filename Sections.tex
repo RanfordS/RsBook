@@ -1,0 +1,39 @@
+%% Sectioning
+
+\newcounter{Rvolumestart}
+\newcounter{Rchapterstart}
+
+\newcounter{Rvolume}
+\newcounter{Rchapter}
+\newcounter{Rsection}
+\newcounter{Rsubsect}
+\newcommand{\Rcurrentvolume}{\UNDEF}
+\newcommand{\Rcurrentchapter}{\UNDEF}
+\newcommand{\Rcurrentsection}{\UNDEF}
+\newcommand{\Rcurrentsubsect}{\UNDEF}
+\renewcommand{\theRvolume}{\Roman{Rvolume}}
+\renewcommand{\theRchapter}{\arabic{Rchapter}}
+
+\newcommand{\Rtitlepage}[4]{%
+    \thispagestyle{empty}
+  \vspace*{\fill}
+    ~
+  \vspace*{\fill}
+    \begin{center}
+        {\large\textbf{#1}}\\
+        \rule[1ex]{\textwidth}{1pt}\\
+        {\Huge\textbf{#2}}\\
+        \rule[1ex]{\textwidth}{1pt}\\
+        {\large\textbf{#3}}
+    \end{center}
+  \vspace*{\fill}
+        #4
+  \vspace*{\fill}
+    ~
+  \vspace*{\fill}
+    ~
+  \vspace*{\fill}
+    \newpage
+}
+
+%% End

@@ -1,7 +1,7 @@
 jobname = "RSkyl"
 repeats = 1
 
-make_pdf = 'pdflatex --shell-escape --interaction=nonstopmode -jobname="'..jobname..'" RSkyl.tex'
+make_pdf = 'pdflatex --shell-escape --interaction=nonstopmode -jobname="'..jobname..'" Main.tex'
 make_bib = "biber "..jobname
 make_pdf_null = make_pdf.." > /dev/null"
 make_bib_null = make_bib.." > /dev/null"
