@@ -39,6 +39,28 @@
 \usepackage{pgfplots}
 \usepackage{xcolor}
 
+% Linguistics
+\usepackage{forest}
+\usepackage{tipa}
+\useforestlibrary{linguistics}
+\forestset{%
+    syntax/.style = {%
+        for tree = {%
+            if n children = 0 {%
+                tier = terminal%
+            }{}%
+        }%
+    }%
+}
+%\usepackage{fontspec}
+%\newfontfamily\ipafont{Charis SIL}
+%\newcommand\ipa[1]{{\ipafont #1}}
+
+% Misc
+\usepackage{enumitem}
+\usepackage{layout}
+\usepackage{lipsum}
+
 % Tables of Contents
 %\usepackage{tocloft}
 %\usepackage{morewrites}

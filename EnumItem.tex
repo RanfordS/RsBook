@@ -1,0 +1,15 @@
+%% Enumerate / Itemize
+
+\newcommand{\Rbullet}[1][]{%
+    \begin{tikzpicture}[baseline=0pt,#1]
+        \fill (0pt,0.5ex) circle (1pt);
+    \end{tikzpicture}%
+}
+
+\setlist{topsep=0pt}
+\setlist[itemize]{label=\Rbullet}
+\setlist[enumerate,1]{label=\arabic*.,ref=\arabic*.}
+\setlist[enumerate,2]{label=\alph*.,ref=\theenumi\alph*.}
+\setlist[enumerate,3]{label=\roman*.,ref=\theenumii\roman*.}
+
+%% End

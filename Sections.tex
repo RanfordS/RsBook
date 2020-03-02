@@ -14,6 +14,15 @@
 \renewcommand{\theRvolume}{\Roman{Rvolume}}
 \renewcommand{\theRchapter}{\arabic{Rchapter}}
 
+% toc file streams
+\newwrite\Rmajortocfile
+\newwrite\Rminortocfile
+\immediate\openout\Rmajortocfile=RSkylInternal/MajorContents.new
+\immediate\write\Rmajortocfile{%
+    \noexpand\newcommand{\noexpand\Rmajortocincluded}{true}
+}
+%\immediate\closeout\Rmajortocfile
+
 \newcommand{\Rtitlepage}[4]{%
     \thispagestyle{empty}
   \vspace*{\fill}
@@ -34,6 +43,52 @@
     ~
   \vspace*{\fill}
     \newpage
+}
+
+\newcommand{\Rmajortoc}{%
+    \noindent\textbf{Table of Contents}\\[1ex]
+    \rule[1ex]{\textwidth}{1pt}\\[1em]
+    \input{RSkylInternal/MajorContents.tex}
+    {\tiny\lstinputlisting{RSkylInternal/MajorContents.tex}}
+    \ifdefined\Rmajortocincluded
+    \else
+        \TODO{Major ToC (rebuild required)}
+    \fi
+}
+
+\newcommand{\Rtocline}[4]{%
+    \noindent
+    \parbox[t]{#1}{%
+        \hfill
+        #2
+        \hspace*{2pt}
+    }
+    \textbf{#3}
+    \phantom{\rule[-0.5em]{0pt}{0.5em}}
+    \hfill
+    #4
+    \hspace*{1cm}\\
+}
+
+\newcommand{\Rvolume}[1]{%
+    \refstepcounter{Rvolume}
+    \setcounter{Rvolumestart}{\value{page}}
+    \renewcommand{\Rcurrentvolume}{#1}
+    \immediate\write\Rmajortocfile{%
+        \noexpand\Rtocline{1cm}{\Roman{Rvolume}.}{#1}{\arabic{page}}
+    }
+    %
+    \setcounter{Rchapter}{0}
+    \setcounter{Rsection}{0}
+    \setcounter{Rsubsect}{0}
+    %
+    \thispagestyle{empty}
+    ~\vspace{1in}
+    \begin{center}
+        {\large\textbf{Volume \Roman{Rvolume}}}\\
+        \rule[1ex]{0.5\textwidth}{1pt}\\
+        {\huge\textbf{#1}}
+    \end{center}
 }
 
 %% End
