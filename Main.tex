@@ -1,11 +1,7 @@
 \input{Header.tex}
 %\usepackage{lua-visual-debug}
-%\usepackage{enumitem}
 
-%\usepackage{layout}
-%\usepackage{lipsum}
-
-\newcommand{\Rsamplefox}{The~quick~brown~fox~jumped~over~the~lazy~dog}
+\newcommand{\Rsamplefox}{Giffib:\ ``The\ quick\ brown\ fox\ jumped\ over\ the\ lazy\ dog.''}
 \newcommand{\Rsampleupp}{ABCDEFGHIJKLMNOPQRSTUVWXYZ}
 \newcommand{\Rsamplelow}{abcdefghijklmnopqrstuvwxyz}
 \newcommand{\Rsamplenum}{0123456789}
@@ -27,9 +23,11 @@
     \end{itemize}
 }
 
+\Rvolume{Page Layout}
+
 \layout
 
-\setcounter{Rvolume}{1}
+\Rvolume{Testing}
 \renewcommand{\Rcurrentchapter}{The Testing Ground}
 
 \textbf{Standard} - \Rsampleall
@@ -147,24 +145,26 @@ Alla nasa ero mone\\
 polo Anne jena golly quack\\
 polo Anne jena golly quack\\
 
-A test of the TIPA package for \textipa{/f@"nEtIk/} transcriptions or \ipa{ɹʌka}.
-{\forestapplylibrarydefaults{linguistics}
-\begin{forest}
-    syntax
-    [S  [I  [Q  [V [Do]]
-                [N [you]]
+A test of the IPA command \ipa{/ɹʌka/}.
+\begin{center}
+    \forestapplylibrarydefaults{linguistics}
+    \begin{forest}
+        syntax
+        [S  [I  [Q  [V [Do]]
+                    [N [you]]
+                ]
+                [VP [AV [really]]
+                    [V [like]]
+                ]
             ]
-            [VP [AV [really]]
-                [V [like]]
+            [Det [N [my]]
+                 [NP [Adj [red]]
+                     [N [dress ?, roof]]
+                 ]
             ]
         ]
-        [Det [N [my]]
-             [NP [Adj [red]]
-                 [N [dress ?, roof]]
-             ]
-        ]
-    ]
-\end{forest}}
+    \end{forest}
+\end{center}
 
 \newpage
 \Rvolume{Test Volume}
