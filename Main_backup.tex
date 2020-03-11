@@ -175,10 +175,18 @@ A test of the IPA command \ipa{/ɹʌka/}.
 \end{center}
 
 \newpage
+
+\begin{lilypond}
+    \relative c' {
+        c2 e2 \times 2/3 { f8 a b } a2 e4
+    }
+\end{lilypond}
+
+\newpage
 \Rvolume{Test Volume}
-\Rchapter{Test Chapter}
-%\immediate\write\Rmajortocfile{\noexpand\Rtocline{2cm}{1.}{Test Section}{12}{}}
-%\immediate\write\Rmajortocfile{\noexpand\Rtocline{2.5cm}{1.}{Test Subsection}{12}{}}
+\immediate\write\Rmajortocfile{\noexpand\Rtocline{1.5cm}{1.}{Test Chapter}{11}}
+\immediate\write\Rmajortocfile{\noexpand\Rtocline{2cm}{1.}{Test Section}{12}}
+\immediate\write\Rmajortocfile{\noexpand\Rtocline{2.5cm}{1.}{Test Subsection}{12}}
 \Rmajortoc
 
 \end{document}

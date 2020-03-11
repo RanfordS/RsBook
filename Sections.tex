@@ -56,18 +56,25 @@
     \fi
 }
 
-\newcommand{\Rtocline}[4]{%
+\newcommand{\Rtocline}[5]{%
     \noindent
     \parbox[t]{#1}{%
         \hfill
         #2
         \hspace*{2pt}
     }
-    \textbf{#3}
+    \hyperlink{#5}{\textbf{#3}}
     \phantom{\rule[-0.5em]{0pt}{0.5em}}
     \hfill
     #4
     \hspace*{1cm}\\
+}
+
+\newcommand{\Rsectinfo}{%
+    \arabic{Rvolume}:%
+    \arabic{Rchapter}:%
+    \arabic{Rsection}:%
+    \arabic{Rsubsect}%
 }
 
 \newcommand{\Rvolume}[1]{%
@@ -75,7 +82,11 @@
     \setcounter{Rvolumestart}{\value{page}}
     \renewcommand{\Rcurrentvolume}{#1}
     \immediate\write\Rmajortocfile{%
-        \noexpand\Rtocline{1cm}{\Roman{Rvolume}.}{#1}{\arabic{page}}
+        \noexpand\Rtocline{1cm}%
+        {\Roman{Rvolume}.}%
+        {#1}%
+        {\arabic{page}}%
+        {RSkyl:V:\Rsectinfo}
     }
     %
     \setcounter{Rchapter}{0}
@@ -85,9 +96,35 @@
     \thispagestyle{empty}
     ~\vspace{1in}
     \begin{center}
+        \hypertarget{RSkyl:V:\Rsectinfo}%
         {\large\textbf{Volume \Roman{Rvolume}}}\\
-        \rule[1ex]{0.5\textwidth}{1pt}\\
+        \rule[1ex]{0.75\textwidth}{1pt}\\
         {\huge\textbf{#1}}
+    \end{center}
+}
+
+\newcommand{\Rchapter}[1]{%
+    \refstepcounter{Rchapter}
+    \setcounter{Rchapterstart}{\value{page}}
+    \renewcommand{\Rcurrentchapter}{#1}
+    \immediate\write\Rmajortocfile{%
+        \noexpand\Rtocline{1.5cm}%
+        {\arabic{Rchapter}}%
+        {#1}%
+        {\arabic{page}}%
+        {RSkyl:C:\Rsectinfo}
+    }
+    %
+    \setcounter{Rsection}{0}
+    \setcounter{Rsubsect}{0}
+    %
+    \thispagestyle{empty}
+    ~\vspace{1cm}
+    \begin{center}
+        \hypertarget{RSkyl:C:\Rsectinfo}%
+        {\textbf{Chapter \arabic{Rchapter}}}\\
+        \rule[1ex]{0.5\textwidth}{1pt}\\
+        {\Large\textbf{#1}}
     \end{center}
 }
 
