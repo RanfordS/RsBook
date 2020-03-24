@@ -63,7 +63,7 @@
         #2
         \hspace*{2pt}
     }
-    \hyperlink{#5}{\textbf{#3}}
+    \hyperlink{#5}{#3}
     \phantom{\rule[-0.5em]{0pt}{0.5em}}
     \hfill
     #4
@@ -84,7 +84,7 @@
     \immediate\write\Rmajortocfile{%
         \noexpand\Rtocline{1cm}%
         {\Roman{Rvolume}.}%
-        {#1}%
+        {\noexpand\textbf{#1}}%
         {\arabic{page}}%
         {RSkyl:V:\Rsectinfo}
     }
@@ -101,6 +101,7 @@
         \rule[1ex]{0.75\textwidth}{1pt}\\
         {\huge\textbf{#1}}
     \end{center}
+    \noindent%
 }
 
 \newcommand{\Rchapter}[1]{%
@@ -109,8 +110,8 @@
     \renewcommand{\Rcurrentchapter}{#1}
     \immediate\write\Rmajortocfile{%
         \noexpand\Rtocline{1.5cm}%
-        {\arabic{Rchapter}}%
-        {#1}%
+        {\arabic{Rchapter}.}%
+        {\noexpand\textbf{#1}}%
         {\arabic{page}}%
         {RSkyl:C:\Rsectinfo}
     }
@@ -126,6 +127,46 @@
         \rule[1ex]{0.5\textwidth}{1pt}\\
         {\Large\textbf{#1}}
     \end{center}
+    \noindent%
 }
 
+\newcommand{\Rsection}[1]{%
+    \refstepcounter{Rsection}
+    \renewcommand{\Rcurrentsection}{#1}
+    \immediate\write\Rmajortocfile{%
+        \noexpand\Rtocline{2cm}%
+        {\arabic{Rsection}.}%
+        {#1}%
+        {\arabic{page}}%
+        {RSkyl:S:\Rsectinfo}%
+    }
+    %
+    \setcounter{Rsubsect}{0}
+    %
+    ~\vspace{1cm}\\
+    \noindent\hypertarget{RSkyl:S:\Rsectinfo}%
+    {\textbf{Section \arabic{Rsection}}}\\[-1.5ex]
+    \rule{0.3\textwidth}{0.5pt}\\
+    {\large\textbf{#1}}\\[1cm]
+    \noindent%
+}
+
+\newcommand{\Rsubsect}[1]{%
+    \refstepcounter{Rsubsect}
+    \renewcommand{\Rcurrentsubsect}{#1}
+    \immediate\write\Rmajortocfile{%
+        \noexpand\Rtocline{2.5cm}%
+        {\roman{Rsubsect}.}%
+        {#1}%
+        {\arabic{page}}%
+        {RSkyl:SS:\Rsectinfo}%
+    }
+    %
+    ~\vspace{1em}\\
+    \noindent\hypertarget{RSkyl:SS:\Rsectinfo}%
+    {Sub-Section \roman{Rsubsect}}\\[-1.5ex]
+    \rule{0.2\textwidth}{0.5pt}\\
+    {\textbf{#1}}\\[1em]
+    \noindent%
+}
 %% End
