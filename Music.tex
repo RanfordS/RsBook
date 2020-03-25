@@ -1,0 +1,8 @@
+%% Music
+
+\newcommand{\Rmusic}[1]{%
+    \directlua{os.execute'lilypond-book -o RSkylInternal/ ./#1.lytex'}
+    \subimport{RSkylInternal/}{#1.tex}
+}
+
+%% End

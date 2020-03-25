@@ -174,6 +174,45 @@ A test of the IPA command \ipa{/ɹʌka/}.
     \end{forest}
 \end{center}
 
+%\input{ExampleMusic.tex}
+\begin{music}
+    \parindent10mm
+    \instrumentnumber{1} % a single instrument
+    \setname1{Piano\hspace*{1em}} % whose name is Piano
+    \setstaffs1{2} % with two staffs
+    \generalmeter{\meterfrac44} % 4/4 meter chosen
+    \startextract % starting real score
+        \Notes\ibu0f0\qb0{cge}\tbu0\qb0g|\hl j\en
+        \Notes\ibu0f0\qb0{cge}\tbu0\qb0g|\ql l\sk\ql n\en
+        \bar
+        \Notes\ibu0f0\qb0{dgf}|\qlp i\en
+        \notes\tbu0\qb0g|\ibbl1j3\qb1j\tbl1\qb1k\en
+        \Notes\ibu0f0\qb0{cge}\tbu0\qb0g|\hl j\en
+    \zendextract % terminate excerpt
+\end{music}
+
+\begin{music}
+    \interstaff{13}
+    \instrumentnumber{1}
+    \setstaffs1{2}
+    \setclef1\bass
+    \generalmeter\allabreve
+    \startextract
+        \NOtes\qp\nextstaff\isluru0q\zq{q}\ql{j}\en
+        \bar
+        \nspace
+        \Notes\ibu0a1\qb0{CEJLcL}%
+        \nextstaff\roff{\zw{l}}\pt{p}\zh{_p}\pt{i}\hl{_i}\en
+        \Notes\qb0J\itied1a\qb0a\nextstaff\tslur0o\zq{o}\ql{h}\en
+        \bar
+        \Notes\ttie1\zh{.L.a}\hl{.e}%
+        \nextstaff\qb0{chj}\tbl0\qb0l\cl{q}\ds\en
+        \NOtes\qp\nextstaff\zq{q}\ql{j}\en
+    \endextract
+\end{music}
+
+\Rmusic{lilypondTest}
+
 \newpage
 \Rvolume{Test Volume}
 %

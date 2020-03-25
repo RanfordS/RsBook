@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2020.3.11)  24 MAR 2020 21:39
+This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2020.3.11)  25 MAR 2020 21:57
  \write18 enabled.
 **Main.tex
 (./Main.tex
@@ -184,7 +184,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.041 seconds)
+luaotfload | main : initialization completed in 0.042 seconds)
 Lua module: fontspec 2016/02/01 2.5a Advanced font selection for LuaLaTeX.
 (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 Package: fontspec-luatex 2016/02/01 v2.5a Font selection for XeLaTeX and LuaLaTe
@@ -1069,6 +1069,10 @@ File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.1a (rcs-revision 1.9)
 zlibrarymatrix.code.tex
 File: tikzlibrarymatrix.code.tex 2013/07/12 v3.0.1a (rcs-revision 1.4)
 )
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2013/07/12 v3.0.1a (rcs-revision 1.5)
+)
 (/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
 Package: pgfplots 2016/01/06 v1.13 Data Visualization (1.13)
@@ -1202,20 +1206,342 @@ File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.co
 de.tex
 File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
-))) (/usr/share/texlive/texmf-dist/tex/latex/forest/forest.sty
+))) (/usr/share/texlive/texmf-dist/tex/latex/musixtex/musixtex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/musixtex/musixtex.tex
+MusiXTeX(c) 1.20 <2015-12-13>
+\n@i=\count196
+\n@ii=\count197
+\n@iii=\count198
+\n@iv=\count199
+\n@v=\count266
+\n@vi=\count267
+\n@vii=\count268
+\n@viii=\count269
+\toks@box=\box84
+\w@rkbox=\box85
+\n@otebox=\box86
+\y@=\dimen302
+\y@i=\dimen303
+\y@ii=\dimen304
+\y@iii=\dimen305
+\y@iv=\dimen306
+\y@v=\dimen307
+\group@no=\count270
+\interinstrument=\dimen308
+\N@s=\count271
+\s@Y=\dimen309
+\lin@pos=\dimen310
+\meet@minus@n@iv=\count272
+\interbeam=\dimen311
+\b@amthick=\dimen312
+\Interligne=\dimen313
+\Internote=\dimen314
+\ch@box=\box87
+\musicsize=\count273
+\qd@skip=\dimen315
+\qn@width=\dimen316
+\wn@width=\dimen317
+\txt@ff=\skip67
+\s@indent=\skip68
+\big@spc=\skip69
+\lthick=\dimen318
+\afterruleskip=\skip70
+\staffbotmarg=\dimen319
+\stafftopmarg=\dimen320
+\line@width=\dimen321
+\interportee=\dimen322
+\noport@@=\count274
+\noinstrum@nt=\count275
+\altportee=\dimen323
+\systemheight=\dimen324
+\altplancher=\dimen325
+\instrum@in@group=\skip71
+\boxitsep=\skip72
+\barsinpi@c@=\count276
+\barno=\count277
+\startbarno=\count278
+\sign@skip=\dimen326
+\maxsign@skip=\dimen327
+\x@skip=\dimen328
+\n@skip=\dimen329
+\beforeruleskip=\skip73
+\widthtyp@=\count279
+\lastbarno=\count280
+\cut@v=\skip74
+\init@volta@pos=\skip75
+\volta@startcor=\skip76
+\volta@endcor=\skip77
+\writ@volta@box=\box88
+\barsinlin@=\count281
+\maxbarsinlin@=\count282
+\lastbarpos=\skip78
+\ut@ref=\count283
+\meterskip=\skip79
+\t@c=\toks46
+\clef@skip=\skip80
+\noteskip=\dimen330
+\transpose=\count284
+\normaltranspose=\count285
+\locx@skip=\dimen331
+\elemskip=\dimen332
+\@l@mskip=\dimen333
+\inh@alt=\count286
+\st@bot=\dimen334
+\st@top=\dimen335
+\stem@skip=\dimen336
+\s@lope=\dimen337
+\y@vi=\dimen338
+\lift@rest=\dimen339
+\accshift=\skip81
+\@icresc=\skip82
+\@itrillei=\skip83
+\@itrilleii=\skip84
+\@itrilleiii=\skip85
+\@itrilleiv=\skip86
+\@itrillev=\skip87
+\@itrillevi=\skip88
+\tr@number=\count287
+\o@swz=\toks47
+\o@number=\count288
+\y@vii=\dimen340
+\y@viii=\dimen341
+\y@ix=\dimen342
+\tuptxtb@x=\box89
+\notes@open=\count289
+\k@ii=\skip89
+\i@ni=\dimen343
+\b@xi=\dimen344
+\b@zi=\dimen345
+\c@xi=\dimen346
+\c@zi=\skip90
+\d@xi=\dimen347
+\d@zi=\skip91
+\e@xi=\dimen348
+\e@zi=\skip92
+\b@pi=\count290
+\b@ni=\count291
+\n@pi=\count292
+\a@si=\count293
+\o@si=\count294
+\a@ci=\toks48
+\o@ci=\toks49
+\m@ti=\toks50
+\k@iii=\skip93
+\i@nii=\dimen349
+\b@xii=\dimen350
+\b@zii=\dimen351
+\c@xii=\dimen352
+\c@zii=\skip94
+\d@xii=\dimen353
+\d@zii=\skip95
+\e@xii=\dimen354
+\e@zii=\skip96
+\b@pii=\count295
+\b@nii=\count296
+\n@pii=\count297
+\a@sii=\count298
+\o@sii=\count299
+\a@cii=\toks51
+\o@cii=\toks52
+\m@tii=\toks53
+\k@iiii=\skip97
+\i@niii=\dimen355
+\b@xiii=\dimen356
+\b@ziii=\dimen357
+\c@xiii=\dimen358
+\c@ziii=\skip98
+\d@xiii=\dimen359
+\d@ziii=\skip99
+\e@xiii=\dimen360
+\e@ziii=\skip100
+\b@piii=\count300
+\b@niii=\count301
+\n@piii=\count302
+\a@siii=\count303
+\o@siii=\count304
+\a@ciii=\toks54
+\o@ciii=\toks55
+\m@tiii=\toks56
+\k@iiv=\skip101
+\i@niv=\dimen361
+\b@xiv=\dimen362
+\b@ziv=\dimen363
+\c@xiv=\dimen364
+\c@ziv=\skip102
+\d@xiv=\dimen365
+\d@ziv=\skip103
+\e@xiv=\dimen366
+\e@ziv=\skip104
+\b@piv=\count305
+\b@niv=\count306
+\n@piv=\count307
+\a@siv=\count308
+\o@siv=\count309
+\a@civ=\toks57
+\o@civ=\toks58
+\m@tiv=\toks59
+\k@iv=\skip105
+\i@nv=\dimen367
+\b@xv=\dimen368
+\b@zv=\dimen369
+\c@xv=\dimen370
+\c@zv=\skip106
+\d@xv=\dimen371
+\d@zv=\skip107
+\e@xv=\dimen372
+\e@zv=\skip108
+\b@pv=\count310
+\b@nv=\count311
+\n@pv=\count312
+\a@sv=\count313
+\o@sv=\count314
+\a@cv=\toks60
+\o@cv=\toks61
+\m@tv=\toks62
+\k@ivi=\skip109
+\i@nvi=\dimen373
+\b@xvi=\dimen374
+\b@zvi=\dimen375
+\c@xvi=\dimen376
+\c@zvi=\skip110
+\d@xvi=\dimen377
+\d@zvi=\skip111
+\e@xvi=\dimen378
+\e@zvi=\skip112
+\b@pvi=\count315
+\b@nvi=\count316
+\n@pvi=\count317
+\a@svi=\count318
+\o@svi=\count319
+\a@cvi=\toks63
+\o@cvi=\toks64
+\m@tvi=\toks65
+maxinstruments=6
+\f@xi=\dimen379
+\f@zi=\skip113
+\f@xii=\dimen380
+\f@zii=\skip114
+\f@xiii=\dimen381
+\f@ziii=\skip115
+\f@xiv=\dimen382
+\f@ziv=\skip116
+\f@xv=\dimen383
+\f@zv=\skip117
+\f@xvi=\dimen384
+\f@zvi=\skip118
+ max128beams=6
+\g@bi=\skip119
+\g@hi=\skip120
+\g@bii=\skip121
+\g@hii=\skip122
+\g@biii=\skip123
+\g@hiii=\skip124
+ maxgroups=3
+\s@xi=\dimen385
+\s@si=\toks66
+\s@Yi=\dimen386
+\s@ai=\skip125
+\s@yi=\count320
+\s@Ni=\count321
+\s@zi=\count322
+\s@di=\toks67
+\s@xii=\dimen387
+\s@sii=\toks68
+\s@Yii=\dimen388
+\s@aii=\skip126
+\s@yii=\count323
+\s@Nii=\count324
+\s@zii=\count325
+\s@dii=\toks69
+\s@xiii=\dimen389
+\s@siii=\toks70
+\s@Yiii=\dimen390
+\s@aiii=\skip127
+\s@yiii=\count326
+\s@Niii=\count327
+\s@ziii=\count328
+\s@diii=\toks71
+\s@xiv=\dimen391
+\s@siv=\toks72
+\s@Yiv=\dimen392
+\s@aiv=\skip128
+\s@yiv=\count329
+\s@Niv=\count330
+\s@ziv=\count331
+\s@div=\toks73
+\s@xv=\dimen393
+\s@sv=\toks74
+\s@Yv=\dimen394
+\s@av=\skip129
+\s@yv=\count332
+\s@Nv=\count333
+\s@zv=\count334
+\s@dv=\toks75
+\s@xvi=\dimen395
+\s@svi=\toks76
+\s@Yvi=\dimen396
+\s@avi=\skip130
+\s@yvi=\count335
+\s@Nvi=\count336
+\s@zvi=\count337
+\s@dvi=\toks77
+ maxslurs=6
+\tr@xi=\skip131
+\tr@swi=\toks78
+\tr@yi=\skip132
+\tr@xii=\skip133
+\tr@swii=\toks79
+\tr@yii=\skip134
+\tr@xiii=\skip135
+\tr@swiii=\toks80
+\tr@yiii=\skip136
+\tr@xiv=\skip137
+\tr@swiv=\toks81
+\tr@yiv=\skip138
+\tr@xv=\skip139
+\tr@swv=\toks82
+\tr@yv=\skip140
+\tr@xvi=\skip141
+\tr@swvi=\toks83
+\tr@yvi=\skip142
+ maxtrills=6
+\o@xi=\skip143
+\o@yi=\skip144
+\o@swi=\toks84
+\o@xii=\skip145
+\o@yii=\skip146
+\o@swii=\toks85
+\o@xiii=\skip147
+\o@yiii=\skip148
+\o@swiii=\toks86
+\o@xiv=\skip149
+\o@yiv=\skip150
+\o@swiv=\toks87
+\o@xv=\skip151
+\o@yv=\skip152
+\o@swv=\toks88
+\o@xvi=\skip153
+\o@yvi=\skip154
+\o@swvi=\toks89
+
+maxoctlines=6
+\outmux=\write7
+\mulooseness=\count338
+\linegoal=\count339
+\l@eftrightbox=\box90
+\inmux=\read5
+) (/usr/share/texlive/texmf-dist/tex/latex/musixtex/musixltx.tex
+MusiXLaTeX T.61 <25 September 1996>
+)) (/usr/share/texlive/texmf-dist/tex/latex/forest/forest.sty
 Package: forest 2016/03/04 v2.0.2 Drawing (linguistic) trees
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibraryfit.code.tex
-File: tikzlibraryfit.code.tex 2013/07/12 v3.0.1a (rcs-revision 1.5)
-)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersection
 s.code.tex
-\pgf@intersect@solutions=\count196
+\pgf@intersect@solutions=\count340
 ) (/usr/share/texlive/texmf-dist/tex/latex/pgfopts/pgfopts.sty
 Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
-\pgfopts@list@add@a@toks=\toks46
-\pgfopts@list@add@b@toks=\toks47
+\pgfopts@list@add@a@toks=\toks90
+\pgfopts@list@add@b@toks=\toks91
 )
 (/usr/share/texlive/texmf-dist/tex/latex/elocalloc/elocalloc.sty
 Package: elocalloc 2015/06/21 v0.02 local allocation for LaTeX 2015+ (DPC)
@@ -1236,28 +1562,28 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 . 
 . Defining command \ProvidesForestLibrary with sig. 'm O{}' on line 95.
 .................................................
-\safeloop@depth=\count197
-\safeRKloop@depth=\count198
-\forest@temp@dimen=\dimen302
-\forest@temp@count=\count199
-\forest@n=\count266
-\forest@temp@global@count=\count267
-\forest@temp@toks=\toks48
-\forest@sort@m=\count268
-\forest@sort@k=\count269
-\forest@sort@p=\count270
-\bracket@content=\toks49
-\bracket@afterthought=\toks50
-\forest@node@maxid=\count271
-\forest@processargs@result=\toks51
-\forest@processargs@current=\toks52
-\forest@nodewalk@shortsteps@resolution=\toks53
-\forest@do@dynamics=\toks54
-\forest@box=\box84
-\forest@xg=\dimen303
-\forest@yg=\dimen304
-\forest@xs=\dimen305
-\forest@ys=\dimen306
+\safeloop@depth=\count341
+\safeRKloop@depth=\count342
+\forest@temp@dimen=\dimen397
+\forest@temp@count=\count343
+\forest@n=\count344
+\forest@temp@global@count=\count345
+\forest@temp@toks=\toks92
+\forest@sort@m=\count346
+\forest@sort@k=\count347
+\forest@sort@p=\count348
+\bracket@content=\toks93
+\bracket@afterthought=\toks94
+\forest@node@maxid=\count349
+\forest@processargs@result=\toks95
+\forest@processargs@current=\toks96
+\forest@nodewalk@shortsteps@resolution=\toks97
+\forest@do@dynamics=\toks98
+\forest@box=\box91
+\forest@xg=\dimen398
+\forest@yg=\dimen399
+\forest@xs=\dimen400
+\forest@ys=\dimen401
 .................................................
 . LaTeX info: "xparse/define-environment"
 . 
@@ -1268,58 +1594,61 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 . 
 . Defining command \Forest with sig. 's D(){} m' on line 6640.
 .................................................
-\forest@externalize@max@outer@n=\count272
-\forest@externalize@inner@n=\count273
+\forest@externalize@max@outer@n=\count350
+\forest@externalize@inner@n=\count351
 )
 (/usr/share/texlive/texmf-dist/tex/latex/forest/forest-lib-linguistics.sty
 Package: forest-lib-linguistics 2015/11/14 v0.1
-\standardnodestrutbox=\box85
+\standardnodestrutbox=\box92
 )
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\labelindent=\skip67
-\enit@outerparindent=\dimen307
-\enit@toks=\toks55
-\enit@inbox=\box86
-\enitdp@description=\count274
+\labelindent=\skip155
+\enit@outerparindent=\dimen402
+\enit@toks=\toks99
+\enit@inbox=\box93
+\enitdp@description=\count352
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/layout.sty
 Package: layout 2014/10/28 v1.2c Show layout parameters
-\oneinch=\count275
-\cnt@paperwidth=\count276
-\cnt@paperheight=\count277
-\cnt@hoffset=\count278
-\cnt@voffset=\count279
-\cnt@textheight=\count280
-\cnt@textwidth=\count281
-\cnt@topmargin=\count282
-\cnt@oddsidemargin=\count283
-\cnt@evensidemargin=\count284
-\cnt@headheight=\count285
-\cnt@headsep=\count286
-\cnt@marginparsep=\count287
-\cnt@marginparwidth=\count288
-\cnt@marginparpush=\count289
-\cnt@footskip=\count290
-\fheight=\count291
-\ref@top=\count292
-\ref@hoffset=\count293
-\ref@voffset=\count294
-\ref@head=\count295
-\ref@body=\count296
-\ref@foot=\count297
-\ref@margin=\count298
-\ref@marginwidth=\count299
-\ref@marginpar=\count300
-\Interval=\count301
-\ExtraYPos=\count302
-\PositionX=\count303
-\PositionY=\count304
-\ArrowLength=\count305
+\oneinch=\count353
+\cnt@paperwidth=\count354
+\cnt@paperheight=\count355
+\cnt@hoffset=\count356
+\cnt@voffset=\count357
+\cnt@textheight=\count358
+\cnt@textwidth=\count359
+\cnt@topmargin=\count360
+\cnt@oddsidemargin=\count361
+\cnt@evensidemargin=\count362
+\cnt@headheight=\count363
+\cnt@headsep=\count364
+\cnt@marginparsep=\count365
+\cnt@marginparwidth=\count366
+\cnt@marginparpush=\count367
+\cnt@footskip=\count368
+\fheight=\count369
+\ref@top=\count370
+\ref@hoffset=\count371
+\ref@voffset=\count372
+\ref@head=\count373
+\ref@body=\count374
+\ref@foot=\count375
+\ref@margin=\count376
+\ref@marginwidth=\count377
+\ref@marginpar=\count378
+\Interval=\count379
+\ExtraYPos=\count380
+\PositionX=\count381
+\PositionY=\count382
+\ArrowLength=\count383
 )
 (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count306
+\c@lips@count=\count384
+)
+(/usr/share/texlive/texmf-dist/tex/latex/import/import.sty
+Package: import 2009/03/23  v 5.1
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
@@ -1358,15 +1687,19 @@ Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
-)
-\@linkdim=\dimen308
-\Hy@linkcounter=\count307
-\Hy@pagecounter=\count308
 
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+
+Package auxhook Warning: Cannot patch \document,
+(auxhook)                using \AtBeginDocument instead.
+
+)
+\@linkdim=\dimen403
+\Hy@linkcounter=\count385
+\Hy@pagecounter=\count386
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count309
+\Hy@SavedSpaceFactor=\count387
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -1378,17 +1711,17 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count310
+\c@Hy@tempcnt=\count388
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen309
-\Fld@menulength=\count311
-\Field@Width=\dimen310
-\Fld@charsize=\dimen311
+\XeTeXLinkMargin=\dimen404
+\Fld@menulength=\count389
+\Field@Width=\dimen405
+\Fld@charsize=\dimen406
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -1398,24 +1731,24 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count312
-\c@Item=\count313
-\c@Hfootnote=\count314
+\Hy@abspage=\count390
+\c@Item=\count391
+\c@Hfootnote=\count392
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count315
-\c@bookmark@seq@number=\count316
+\Fld@listcount=\count393
+\c@bookmark@seq@number=\count394
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 2.
 )
-\Hy@SectionHShift=\skip68
+\Hy@SectionHShift=\skip156
 ))
 (./Font.tex
 luaotfload | cache : Lookup cache loaded from /home/alex/.texmf-var/luatex-cache
@@ -1424,7 +1757,7 @@ luaotfload | load : Lookup/name: "Charis SIL" -> "CharisSIL-R.ttf"(compiling luc
 : /var/lib/texmf/luatex-cache/generic/fonts/otf/charissil-r.luc)(load luc: /home
 /alex/.texmf-var/luatex-cache/generic/fonts/otf/charissil-r.luc)
 luaotfload | load : Lookup/name: "Charis SIL" -> "CharisSIL-R.ttf"
-\g__fontspec_family_CharisSIL_int=\count317
+\g__fontspec_family_CharisSIL_int=\count395
 luaotfload | load : Lookup/name: "Charis SIL" -> "CharisSIL-R.ttf"
 luaotfload | load : Lookup/name: "Charis SIL" -> "CharisSIL-BI.ttf"(compiling lu
 c: /var/lib/texmf/luatex-cache/generic/fonts/otf/charissil-bi.luc)(load luc: /ho
@@ -1474,7 +1807,7 @@ exmf/luatex-cache/generic/fonts/otf/palatino-nova-w04-light.luc)(load luc: /home
 /alex/.texmf-var/luatex-cache/generic/fonts/otf/palatino-nova-w04-light.luc)
 luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Light" u
 nsuccessful, falling back to file:
-\g__fontspec_family_Palatino-nova-W04-Light_int=\count318
+\g__fontspec_family_Palatino-nova-W04-Light_int=\count396
 luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Light" u
 nsuccessful, falling back to file:
 luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Light" u
@@ -1483,9 +1816,9 @@ luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Titling"
  unsuccessful, falling back to file:(compiling luc: /var/lib/texmf/luatex-cache/
 generic/fonts/otf/palatino-nova-w04-titling.luc)(load luc: /home/alex/.texmf-var
 /luatex-cache/generic/fonts/otf/palatino-nova-w04-titling.luc)
-luaotfload | aux : font no 27 (PalatinonovaW04-Titling) does not define feature 
-rlig for script latn with language dflt
-luaotfload | aux : no font with id 27
+luaotfload | aux : font no 142 (PalatinonovaW04-Titling) does not define feature
+ rlig for script latn with language dflt
+luaotfload | aux : no font with id 142
 *************************************************
 * fontspec warning: "icu-feature-not-exist-in-font"
 * 
@@ -1493,9 +1826,9 @@ luaotfload | aux : no font with id 27
 * not available for font 'Palatino-nova-W04-Titling' with script 'Latin' and
 * language 'Default'.
 *************************************************
-luaotfload | aux : font no 27 (PalatinonovaW04-Titling) does not define feature 
-clig for script latn with language dflt
-luaotfload | aux : no font with id 27
+luaotfload | aux : font no 142 (PalatinonovaW04-Titling) does not define feature
+ clig for script latn with language dflt
+luaotfload | aux : no font with id 142
 *************************************************
 * fontspec warning: "icu-feature-not-exist-in-font"
 * 
@@ -1511,9 +1844,9 @@ luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Medium"
 unsuccessful, falling back to file:
 luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Titling"
  unsuccessful, falling back to file:
-luaotfload | aux : font no 27 (PalatinonovaW04-Titling) does not define feature 
-rlig for script latn with language dflt
-luaotfload | aux : no font with id 27
+luaotfload | aux : font no 142 (PalatinonovaW04-Titling) does not define feature
+ rlig for script latn with language dflt
+luaotfload | aux : no font with id 142
 *************************************************
 * fontspec warning: "icu-feature-not-exist-in-font"
 * 
@@ -1521,9 +1854,9 @@ luaotfload | aux : no font with id 27
 * not available for font 'Palatino-nova-W04-Titling' with script 'Latin' and
 * language 'Default'.
 *************************************************
-luaotfload | aux : font no 27 (PalatinonovaW04-Titling) does not define feature 
-clig for script latn with language dflt
-luaotfload | aux : no font with id 27
+luaotfload | aux : font no 142 (PalatinonovaW04-Titling) does not define feature
+ clig for script latn with language dflt
+luaotfload | aux : no font with id 142
 *************************************************
 * fontspec warning: "icu-feature-not-exist-in-font"
 * 
@@ -1539,9 +1872,9 @@ luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Light-It
 alic" unsuccessful, falling back to file:
 luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Titling"
  unsuccessful, falling back to file:
-luaotfload | aux : font no 27 (PalatinonovaW04-Titling) does not define feature 
-rlig for script latn with language dflt
-luaotfload | aux : no font with id 27
+luaotfload | aux : font no 142 (PalatinonovaW04-Titling) does not define feature
+ rlig for script latn with language dflt
+luaotfload | aux : no font with id 142
 *************************************************
 * fontspec warning: "icu-feature-not-exist-in-font"
 * 
@@ -1549,9 +1882,9 @@ luaotfload | aux : no font with id 27
 * not available for font 'Palatino-nova-W04-Titling' with script 'Latin' and
 * language 'Default'.
 *************************************************
-luaotfload | aux : font no 27 (PalatinonovaW04-Titling) does not define feature 
-clig for script latn with language dflt
-luaotfload | aux : no font with id 27
+luaotfload | aux : font no 142 (PalatinonovaW04-Titling) does not define feature
+ clig for script latn with language dflt
+luaotfload | aux : no font with id 142
 *************************************************
 * fontspec warning: "icu-feature-not-exist-in-font"
 * 
@@ -1567,9 +1900,9 @@ luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Medium-I
 talic" unsuccessful, falling back to file:
 luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Titling"
  unsuccessful, falling back to file:
-luaotfload | aux : font no 27 (PalatinonovaW04-Titling) does not define feature 
-rlig for script latn with language dflt
-luaotfload | aux : no font with id 27
+luaotfload | aux : font no 142 (PalatinonovaW04-Titling) does not define feature
+ rlig for script latn with language dflt
+luaotfload | aux : no font with id 142
 *************************************************
 * fontspec warning: "icu-feature-not-exist-in-font"
 * 
@@ -1577,9 +1910,9 @@ luaotfload | aux : no font with id 27
 * not available for font 'Palatino-nova-W04-Titling' with script 'Latin' and
 * language 'Default'.
 *************************************************
-luaotfload | aux : font no 27 (PalatinonovaW04-Titling) does not define feature 
-clig for script latn with language dflt
-luaotfload | aux : no font with id 27
+luaotfload | aux : font no 142 (PalatinonovaW04-Titling) does not define feature
+ clig for script latn with language dflt
+luaotfload | aux : no font with id 142
 *************************************************
 * fontspec warning: "icu-feature-not-exist-in-font"
 * 
@@ -1631,21 +1964,21 @@ onaco.luc)(load luc: /home/alex/.texmf-var/luatex-cache/generic/fonts/otf/monaco
 .luc)
 luaotfload | load : path lookup of "/home/alex/.fonts/Monaco" unsuccessful, fall
 ing back to file:
-luaotfload | aux : font no 32 (Monaco) defines no feature for script latn
-luaotfload | aux : no font with id 32
+luaotfload | aux : font no 147 (Monaco) defines no feature for script latn
+luaotfload | aux : no font with id 147
 .................................................
 . fontspec info: "no-scripts"
 . 
 . Font Monaco does not contain any OpenType `Script' information.
 .................................................
-\g__fontspec_family_Monaco_int=\count319
+\g__fontspec_family_Monaco_int=\count397
 luaotfload | load : path lookup of "/home/alex/.fonts/Monaco" unsuccessful, fall
 ing back to file:
 luaotfload | load : path lookup of "/home/alex/.fonts/Monaco" unsuccessful, fall
 ing back to file:
-luaotfload | aux : font no 32 (Monaco) does not define feature smcp for script  
-with language 
-luaotfload | aux : no font with id 32
+luaotfload | aux : font no 147 (Monaco) does not define feature smcp for script 
+ with language 
+luaotfload | aux : no font with id 147
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1661,23 +1994,23 @@ luaotfload | aux : no font with id 32
 .................................................
 )
 (./Lengths.tex) (./ErrorTools.tex
-\c@UNDEFerr=\count320
+\c@UNDEFerr=\count398
 ) (./PageHeader.tex
-\c@Rsubpage=\count321
+\c@Rsubpage=\count399
 ) (./PageTools.tex)
 (./Sections.tex
-\c@Rvolumestart=\count322
-\c@Rchapterstart=\count323
-\c@Rvolume=\count324
-\c@Rchapter=\count325
-\c@Rsection=\count326
-\c@Rsubsect=\count327
-\Rmajortocfile=\write7
-\Rminortocfile=\write8
+\c@Rvolumestart=\count400
+\c@Rchapterstart=\count401
+\c@Rvolume=\count402
+\c@Rchapter=\count403
+\c@Rsection=\count404
+\c@Rsubsect=\count405
+\Rmajortocfile=\write8
+\Rminortocfile=\write9
 
-\openout7 = RSkylInternal/MajorContents.new
-) (./EnumItem.tex))
-\tempfile=\write9
+\openout8 = RSkylInternal/MajorContents.new
+) (./EnumItem.tex) (./Music.tex))
+\tempfile=\write10
 runsystem(which "pygmentize" && touch "RSkyl.aex")...executed.
 
 runsystem(rm "RSkyl.aex")...executed.
@@ -1711,17 +2044,17 @@ LaTeX Font Info:    ... okay on input line 16.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count328
-\scratchdimen=\dimen312
-\scratchbox=\box87
-\nofMPsegments=\count329
-\nofMParguments=\count330
-\everyMPshowfont=\toks56
-\MPscratchCnt=\count331
-\MPscratchDim=\dimen313
-\MPnumerator=\count332
-\makeMPintoPDFobject=\count333
-\everyMPtoPDFconversion=\toks57
+\scratchcounter=\count406
+\scratchdimen=\dimen407
+\scratchbox=\box94
+\nofMPsegments=\count407
+\nofMParguments=\count408
+\everyMPshowfont=\toks100
+\MPscratchCnt=\count409
+\MPscratchDim=\dimen408
+\MPnumerator=\count410
+\makeMPintoPDFobject=\count411
+\everyMPtoPDFconversion=\toks101
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -1774,7 +2107,7 @@ runsystem(pygmentize -S default -f latex -P commandprefix=PYG > "RSkyl.out.pyg")
 ...executed.
 
 (./RSkyl.out.pyg)
-\c@lstlisting=\count334
+\c@lstlisting=\count412
  ABD: EveryShipout initializing macros
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable ti
@@ -1782,7 +2115,7 @@ ck labels; missing features). Consider writing \pgfplotsset{compat=1.13} into yo
 ur preamble.
  on input line 16.
 
-\AtBeginShipoutBox=\box88
+\AtBeginShipoutBox=\box95
 Package hyperref Info: Link coloring OFF on input line 16.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1790,16 +2123,18 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count335
+\c@section@level=\count413
 )
 LaTeX Info: Redefining \ref on input line 16.
 LaTeX Info: Redefining \pageref on input line 16.
 LaTeX Info: Redefining \nameref on input line 16.
 
 (./RSkyl.out) (./RSkyl.out)
-\@outlinefile=\write10
+\@outlinefile=\write11
 
-\openout10 = RSkyl.out
+\openout11 = RSkyl.out
+
+\openout7 = RSkyl.mx1
 luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Light" u
 nsuccessful, falling back to file:
 luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Medium" 
@@ -1847,8 +2182,8 @@ luaotfload | load : path lookup of "/home/alex/.fonts/Monaco" unsuccessful, fall
 ing back to file:
 luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Titling"
  unsuccessful, falling back to file: [4]
-\c@alpha=\count336
-\c@gamma=\count337
+\c@alpha=\count414
+\c@gamma=\count415
  (./RSkylToC.tex)
 luaotfload | load : path lookup of "/home/alex/.fonts/Monaco" unsuccessful, fall
 ing back to file: (./RSkylToC.tex)
@@ -1859,64 +2194,98 @@ Package TODO Warning: "This bit", page 5, on input line 96.
 Package HIDE Warning: Hidden text, page 5, on input line 97.
 
 
-\openout9 = RSkylToC.tex
+\openout10 = RSkylToC.tex
 [5] [6] [7] [8]
 Underfull \hbox (badness 10000) in paragraph at lines 151--155
 
- []
 
-luaotfload | load : Lookup/name: "CharisSIL" -> "CharisSIL-R.ttf" [9]
+\hbox(0.0+0.0)x452.9679, direction TLT []
+
+luaotfload | load : Lookup/name: "CharisSIL" -> "CharisSIL-R.ttf" bar 1 bar 1 b
+ar 2 bar 3 [9] (./RSkylInternal/lilypondTest.tex
+(./RSkylInternal/61/lily-1ab8b9f1-systems.tex
+Package epstopdf Info: Source file: <RSkylInternal/61/lily-1ab8b9f1-1.eps>
+(epstopdf)                    date: 2020-03-25 21:57:11
+(epstopdf)                    size: 193098 bytes
+(epstopdf)             Output file: <RSkylInternal/61/lily-1ab8b9f1-1-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2020-03-25 21:57:11
+(epstopdf)                    size: 18055 bytes
+(epstopdf)             Command: <epstopdf --outfile=RSkylInternal/61/lily-1ab8b9
+f1-1-eps-converted-to.pdf RSkylInternal/61/lily-1ab8b9f1-1.eps>
+(epstopdf)             \includegraphics on input line 1.
+Package epstopdf Info: Output file is already uptodate.
+
+LuaTeX warning (file RSkylInternal/61/lily-1ab8b9f1-1-eps-converted-to.pdf): PDF
+ inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+
+<RSkylInternal/61/lily-1ab8b9f1-1-eps-converted-to.pdf, id=86, 207.77625pt x 42
+.1575pt>
+File: RSkylInternal/61/lily-1ab8b9f1-1-eps-converted-to.pdf Graphic file (type p
+df)
+ <use RSkylInternal/61/lily-1ab8b9f1-1-eps-converted-to.pdf>
+Package pdftex.def Info: RSkylInternal/61/lily-1ab8b9f1-1-eps-converted-to.pdf u
+sed on input line 1.
+(pdftex.def)             Requested size: 207.77573pt x 42.15738pt.
+)) [10<./RSkylInternal/61/lily-1ab8b9f1-1-eps-converted-to.pdf>]
 luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Light" u
 nsuccessful, falling back to file:
 luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Medium" 
-unsuccessful, falling back to file: (./RSkylInternal/MajorContents.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 196--196
+unsuccessful, falling back to file:
+(./RSkylInternal/MajorContents.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 235--235
 
- []
+
+\hbox(0.0+0.0)x452.9679, direction TLT []
 
 (./RSkylInternal/MajorContents.tex)
 runsystem(rm "RSkyl.out.pyg")...executed.
 
- [10]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 198.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 198.
+ [11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 237.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 237.
  (./RSkyl.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 198.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 198.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 237.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 237.
 Package rerunfilecheck Info: File `RSkyl.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 )
 
 Here is how much of LuaTeX's memory you used:
- 56368 strings out of 495004
+ 58424 strings out of 495004
  125171,1648299 words of node,token memory allocated
- 497 words of node memory still in use:
-   11 hlist, 2 vlist, 3 rule, 2 glue, 1 kern, 10 attribute, 50 glue_spec, 10 att
+ 590 words of node memory still in use:
+   11 hlist, 2 vlist, 3 rule, 2 glue, 1 kern, 10 attribute, 73 glue_spec, 10 att
 ribute_list, 1 write nodes
-   avail lists: 1:3,2:1860,3:516,4:1313,5:146,6:1707,7:206,8:24,9:401,10:126
- 58099 multiletter control sequences out of 65536+600000
- 113 fonts using 10090031 bytes
+   avail lists: 1:3,2:2198,3:517,4:1467,5:425,6:1798,7:206,8:24,9:575,10:126
+ 59914 multiletter control sequences out of 65536+600000
+ 226 fonts using 17831679 bytes
  151i,14n,180p,854b,3382s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/share/fonts/opentype/charis/CharisSIL-R.ttf></home/alex/.fonts/Palatino-no
 va-W04-Titling.ttf></home/alex/.fonts/Palatino-nova-W04-Medium-Italic.ttf></home
 /alex/.fonts/Palatino-nova-W04-Light-Italic.ttf></home/alex/.fonts/Monaco.ttf></
 home/alex/.fonts/Palatino-nova-W04-Light.ttf></home/alex/.fonts/Palatino-nova-W0
-4-Medium.ttf><</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex
-10.pfb><</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-<</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><</usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/euex10.pfb><</usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><</usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb><</usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb><</usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb><</usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb><</usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb><</usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb><</usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on RSkyl.pdf (10 pages, 227863 bytes).
+4-Medium.ttf><</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
+12.pfb><</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+><</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><</usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><</usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/euler/euex10.pfb><</usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb><</usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb><</usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb><</usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/euler/eusm10.pfb><</usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/latxfont/lcircle1.pfb><</usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/latxfont/line10.pfb><</usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/symbols/msbm10.pfb><</usr/share/texlive/texmf-dist/
+fonts/type1/public/musixtex-fonts/musix20.pfb><</usr/share/texlive/texmf-dist/fo
+nts/type1/public/musixtex-fonts/musixspx.pfb><</usr/share/texlive/texmf-dist/fon
+ts/type1/public/musixtex-fonts/xslhu20.pfb><</usr/share/texlive/texmf-dist/fonts
+/type1/public/musixtex-fonts/xslz20.pfb>
+Output written on RSkyl.pdf (11 pages, 262636 bytes).
 
-PDF statistics: 198 PDF objects out of 1000 (max. 8388607)
- 151 compressed objects within 2 object streams
- 46 named destinations out of 1000 (max. 131072)
+PDF statistics: 236 PDF objects out of 1000 (max. 8388607)
+ 180 compressed objects within 2 object streams
+ 47 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -57,7 +57,7 @@ for warn in txt:gmatch ("Package TODO Warning: (.-)%.") do
     print ("\27[1;35m"..warn:gsub('\n','').."\27[0m\n")
 end
 
-Clean = {"aux", "nlo", "out", "bbl", "bcf", "blg", "xml", "toc", "lof", "lot"}
+Clean = {"aux", "nlo", "out", "bbl", "bcf", "blg", "xml", "toc", "lof", "lot", 'mx1', 'ly'}
 for _, extension in ipairs (Clean) do
     os.execute ("rm -f *."..extension)
 end

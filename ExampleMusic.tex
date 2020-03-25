@@ -1,0 +1,74 @@
+\begin{tikzpicture}
+
+\def\lastnotename{origin}
+\newbox\notebox
+\coordinate (origin) at (0,0);
+\coordinate (stave) at (origin);
+\foreach \octave [evaluate={\t=int(\octave*7-7);}] in {0, ..., 5}{
+    \foreach \pitch [count=\c from 0, evaluate={\x=int(\octave*7+\c+1);}] in {A,...,G}{
+        \ifnum\t>6
+            \tikzset{extract anchor/.style={anchor=south west, at=(\lastnotename.south east)}}
+        \else
+            \tikzset{extract anchor/.style={anchor=north west, at=(\lastnotename.north east)}}
+        \fi
+        \edef\notename{\pitch-\octave}  
+        \node (\notename)  [inner sep=0pt, outer sep=0pt,text width=1cm, extract anchor/.try]  {%
+            \begin{music}
+                \instrumentnumber{1}
+                \instrumentnumber{2}
+                \nostartrule        
+                \setstaffs1{1}
+                \setstaffs2{1}  
+                \ifnum\x>1
+                    \setclefsymbol1{\empty}
+                    \setclefsymbol2{\empty}
+                \fi
+                \setclef1{\bass}
+                \setclef2{\treble}                                  
+                \startextract
+                \transpose\t
+                \ifnum\t>7
+                    \ifnum\t>14
+                        \Notes \nextinstrument \ql{\pitch} \en      
+                    \else
+                        \Notes \nextinstrument \qu{\pitch} \en                      
+                    \fi
+                \else
+                    \Notes \qu{\pitch} \en
+                \fi
+                \zendextract
+            \end{music}};
+            \xdef\lastnotename{\pitch-\octave}
+}}
+
+\node (stave) [fit={(A-0) (G-5)}] {};
+
+\newif\ifblacknote
+\foreach \octave in {0,...,5}
+    \foreach \pitch [count=\p, evaluate={\t={"la", "si", "so", "r\`e","mi", "fa", "sol"}[\p-1];}] in {A,...,G}{
+        \node [anchor=base] at ([xshift=0.25cm, yshift=-0.25cm]stave.south -| \pitch-\octave.south) {\t};
+        \draw ([xshift=0.25cm, yshift=-1cm]stave.south -| \pitch-\octave.south west) rectangle ++(1cm,-4cm);
+        \blacknotefalse
+        \ifcase\p
+        \or
+            \blacknotetrue
+        \or
+        \or
+            \blacknotetrue
+        \or
+            \blacknotetrue
+        \or
+        \or
+            \blacknotetrue
+        \or
+            \ifnum\octave<5
+                \blacknotetrue
+            \fi
+        \else
+        \fi
+        \ifblacknote
+            \fill ([xshift=0.25cm, yshift=-1cm]stave.south -| \pitch-\octave.south east) ++(-0.25cm,0) rectangle ++(0.5cm,-2.5cm);
+        \fi
+    }
+
+\end{tikzpicture}

@@ -1,0 +1,5 @@
+\begin{lilypond}
+\relative c' {
+  c2 e2 \times 2/3 { f8 a b } a2 e4
+}
+\end{lilypond}
