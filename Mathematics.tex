@@ -1,0 +1,35 @@
+%% Mathematics
+
+\newcommand{\Runderline}[1]{%
+\begin{tikzpicture}[anchor=base,baseline]
+    \node[inner sep=0,outer sep=0] (N) at (0,0) {#1};
+    \coordinate (L) at ($(N.base west)+(0.1ex,-0.3ex)$);
+    \coordinate (R) at ($(N.base east)+(-0.1ex,-0.3ex)$);
+    \draw (L) -- (R);
+\end{tikzpicture}
+}
+
+\newcommand{\Rdoubleunderline}[1]{%
+\begin{tikzpicture}[anchor=base,baseline]
+    \node[inner sep=0,outer sep=0] (N) at (0,0) {#1};
+    \coordinate (L) at ($(N.base west)+(0.1ex,-0.3ex)$);
+    \coordinate (R) at ($(N.base east)+(-0.1ex,-0.3ex)$);
+    \draw (L) -- (R);
+    \draw ($(L)+(0,-0.3ex)$) -- ($(R)+(0,-0.3ex)$);
+\end{tikzpicture}
+}
+
+\newcommand{\Runderarrow}[1]{%
+\begin{tikzpicture}[anchor=base,baseline]
+    \node[inner sep=0,outer sep=0] (N) at (0,0) {#1};
+    \coordinate (L) at ($(N.base west)+(0.1ex,-0.3ex)$);
+    \coordinate (R) at ($(N.base east)+(-0.1ex,-0.3ex)$);
+    \draw (L) -- (R) -- ++(-0.3ex,-0.3ex);
+\end{tikzpicture}
+}
+
+\newcommand{\Rvec}[1]{\Runderline{\ensuremath{#1}}}
+\newcommand{\Rmat}[1]{\Rdoubleunderline{\ensuremath{#1}}}
+\newcommand{\Rdir}[1]{\Runderarrow{\ensuremath{#1}}}
+
+%% End
