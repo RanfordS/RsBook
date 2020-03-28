@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2020.3.11)  26 MAR 2020 18:18
+This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2020.3.11)  28 MAR 2020 13:38
  \write18 enabled.
 **Main.tex
 (./Main.tex
@@ -184,7 +184,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.049 seconds)
+luaotfload | main : initialization completed in 0.044 seconds)
 Lua module: fontspec 2016/02/01 2.5a Advanced font selection for LuaLaTeX.
 (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 Package: fontspec-luatex 2016/02/01 v2.5a Font selection for XeLaTeX and LuaLaTe
@@ -2058,6 +2058,8 @@ luaotfload | aux : no font with id 147
 \Rminortocfile=\write9
 
 \openout8 = RSkylInternal/MajorContents.new
+
+\openout9 = RSkylInternal/MinorContents0.new
 ) (./EnumItem.tex) (./Mathematics.tex) (./Music.tex))
 \tempfile=\write10
 runsystem(which "pygmentize" && touch "RSkyl.aex")...executed.
@@ -2194,6 +2196,15 @@ luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Medium"
 unsuccessful, falling back to file: [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Medium" 
+unsuccessful, falling back to file: (./RSkylInternal/MajorContents.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+
+
+\hbox(0.0+0.0)x452.9679, direction TLT []
+
+
+\openout9 = RSkylInternal/MinorContents1.new
 luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Light" u
 nsuccessful, falling back to file:
 luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Medium" 
@@ -2205,24 +2216,32 @@ luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Light" u
 nsuccessful, falling back to file:
 luaotfload | load : path lookup of "/home/alex/.fonts/Monaco" unsuccessful, fall
 ing back to file:
-LaTeX Font Info:    Try loading font information for U+zeur on input line 37.
+LaTeX Font Info:    Try loading font information for U+zeur on input line 39.
 (/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeur.fd
 File: uzeur.fd 2005/01/11 v4.0 (WaS)
 )
-LaTeX Font Info:    Try loading font information for U+zeus on input line 37.
+LaTeX Font Info:    Try loading font information for U+zeus on input line 39.
 
 (/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeus.fd
 File: uzeus.fd 2005/01/11 v4.0 (WaS)
 )
-LaTeX Font Info:    Try loading font information for U+zeuex on input line 37.
+LaTeX Font Info:    Try loading font information for U+zeuex on input line 39.
 
 (/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeuex.fd
 File: uzeuex.fd 2005/01/11 v4.0 (WaS)
-) [2]
-Two-sided document style, odd page.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(700.50687+0.0)x452.9679, glue set 101.61519, direction TLT []
+
+ [2]
+
+Package UNDEF Warning: Use of undefined command (1) on input line 39.
+
 [3]
-luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Medium" 
-unsuccessful, falling back to file:
+Two-sided document style, even page.
+[4]
+\openout9 = RSkylInternal/MinorContents2.new
+
 luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Light-It
 alic" unsuccessful, falling back to file:
 luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Medium-I
@@ -2230,22 +2249,22 @@ talic" unsuccessful, falling back to file:
 luaotfload | load : path lookup of "/home/alex/.fonts/Monaco" unsuccessful, fall
 ing back to file:
 luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Titling"
- unsuccessful, falling back to file: [4]
+ unsuccessful, falling back to file: [5]
 \c@alpha=\count423
 \c@gamma=\count424
  (./RSkylToC.tex)
 luaotfload | load : path lookup of "/home/alex/.fonts/Monaco" unsuccessful, fall
 ing back to file: (./RSkylToC.tex)
 
-Package TODO Warning: "This bit", page 5, on input line 96.
+Package TODO Warning: "This bit", page 6, on input line 98.
 
 
-Package HIDE Warning: Hidden text, page 5, on input line 97.
+Package HIDE Warning: Hidden text, page 6, on input line 99.
 
 
 \openout10 = RSkylToC.tex
-[5] [6] [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 151--155
+[6] [7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 153--157
 
 
 \hbox(0.0+0.0)x452.9679, direction TLT []
@@ -2254,11 +2273,11 @@ luaotfload | load : Lookup/name: "CharisSIL" -> "CharisSIL-R.ttf" bar 1 bar 1 b
 ar 2 bar 3 [9] (./RSkylInternal/lilypondTest.tex
 (./RSkylInternal/61/lily-1ab8b9f1-systems.tex
 Package epstopdf Info: Source file: <RSkylInternal/61/lily-1ab8b9f1-1.eps>
-(epstopdf)                    date: 2020-03-25 21:57:11
+(epstopdf)                    date: 2020-03-28 13:38:22
 (epstopdf)                    size: 193098 bytes
 (epstopdf)             Output file: <RSkylInternal/61/lily-1ab8b9f1-1-eps-conver
 ted-to.pdf>
-(epstopdf)                    date: 2020-03-25 21:57:11
+(epstopdf)                    date: 2020-03-28 13:38:23
 (epstopdf)                    size: 18055 bytes
 (epstopdf)             Command: <epstopdf --outfile=RSkylInternal/61/lily-1ab8b9
 f1-1-eps-converted-to.pdf RSkylInternal/61/lily-1ab8b9f1-1.eps>
@@ -2268,7 +2287,7 @@ Package epstopdf Info: Output file is already uptodate.
 LuaTeX warning (file RSkylInternal/61/lily-1ab8b9f1-1-eps-converted-to.pdf): PDF
  inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 
-<RSkylInternal/61/lily-1ab8b9f1-1-eps-converted-to.pdf, id=86, 207.77625pt x 42
+<RSkylInternal/61/lily-1ab8b9f1-1-eps-converted-to.pdf, id=93, 207.77625pt x 42
 .1575pt>
 File: RSkylInternal/61/lily-1ab8b9f1-1-eps-converted-to.pdf Graphic file (type p
 df)
@@ -2277,38 +2296,41 @@ Package pdftex.def Info: RSkylInternal/61/lily-1ab8b9f1-1-eps-converted-to.pdf u
 sed on input line 1.
 (pdftex.def)             Requested size: 207.77573pt x 42.15738pt.
 )) [10<./RSkylInternal/61/lily-1ab8b9f1-1-eps-converted-to.pdf>]
-luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Light" u
-nsuccessful, falling back to file:
-luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Medium" 
-unsuccessful, falling back to file:
-(./RSkylInternal/MajorContents.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 241--241
+\openout9 = RSkylInternal/MinorContents3.new
+
+(./RSkylInternal/MinorContents3.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 248--249
 
 
 \hbox(0.0+0.0)x452.9679, direction TLT []
 
-(./RSkylInternal/MajorContents.tex)
+luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Light" u
+nsuccessful, falling back to file:
+luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Medium" 
+unsuccessful, falling back to file:
+luaotfload | load : path lookup of "/home/alex/.fonts/Palatino-nova-W04-Medium" 
+unsuccessful, falling back to file:
 runsystem(rm "RSkyl.out.pyg")...executed.
 
- [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 243.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 243.
+[11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 265.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 265.
  (./RSkyl.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 243.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 243.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 265.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 265.
 Package rerunfilecheck Info: File `RSkyl.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 )
 
 Here is how much of LuaTeX's memory you used:
- 58576 strings out of 495004
+ 58583 strings out of 495004
  125171,1648299 words of node,token memory allocated
- 606 words of node memory still in use:
-   11 hlist, 2 vlist, 3 rule, 2 glue, 1 kern, 10 attribute, 74 glue_spec, 10 att
-ribute_list, 1 write nodes
-   avail lists: 1:3,2:2198,3:529,4:1455,5:425,6:1798,7:206,8:24,9:575,10:126
- 60052 multiletter control sequences out of 65536+600000
- 226 fonts using 17831679 bytes
+ 578 words of node memory still in use:
+   9 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 8 attribute, 74 glue_spec, 8 attrib
+ute_list, 1 write nodes
+   avail lists: 1:2,2:2202,3:531,4:1453,5:417,6:1798,7:216,8:15,9:577,10:126
+ 60055 multiletter control sequences out of 65536+600000
+ 227 fonts using 17942799 bytes
  151i,15n,180p,854b,3382s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/share/fonts/opentype/charis/CharisSIL-R.ttf></home/alex/.fonts/Palatino-no
 va-W04-Titling.ttf></home/alex/.fonts/Palatino-nova-W04-Medium-Italic.ttf></home
@@ -2331,10 +2353,10 @@ fonts/type1/public/musixtex-fonts/musix20.pfb><</usr/share/texlive/texmf-dist/fo
 nts/type1/public/musixtex-fonts/musixspx.pfb><</usr/share/texlive/texmf-dist/fon
 ts/type1/public/musixtex-fonts/xslhu20.pfb><</usr/share/texlive/texmf-dist/fonts
 /type1/public/musixtex-fonts/xslz20.pfb>
-Output written on RSkyl.pdf (11 pages, 264110 bytes).
+Output written on RSkyl.pdf (11 pages, 265757 bytes).
 
-PDF statistics: 236 PDF objects out of 1000 (max. 8388607)
- 180 compressed objects within 2 object streams
- 47 named destinations out of 1000 (max. 131072)
+PDF statistics: 230 PDF objects out of 1000 (max. 8388607)
+ 174 compressed objects within 2 object streams
+ 39 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -22,6 +22,7 @@
     \noexpand\newcommand{\noexpand\Rmajortocincluded}{true}
 }
 %\immediate\closeout\Rmajortocfile
+\immediate\openout\Rminortocfile=RSkylInternal/MinorContents0.new
 
 \newcommand{\Rtitlepage}[4]{%
     \thispagestyle{empty}
@@ -48,26 +49,34 @@
 \newcommand{\Rmajortoc}{%
     \noindent\textbf{Table of Contents}\\[1ex]
     \rule[1ex]{\textwidth}{1pt}\\[1em]
-    \input{RSkylInternal/MajorContents.tex}
-    \lstinputlisting{RSkylInternal/MajorContents.tex}
-    \ifdefined\Rmajortocincluded
-    \else
-        \TODO{Major ToC (rebuild required)}
-    \fi
+    \Rinputif{RSkylInternal/MajorContents.tex}
+    %\lstinputlisting{RSkylInternal/MajorContents.tex}
+    %\ifdefined\Rmajortocincluded
+    %\else
+    %    \TODO{Major ToC (rebuild required)}
+    %\fi
+}
+
+\newcommand{\Rminortoc}{%
+    \noindent\textbf{Table of Contents}\\[1ex]
+    \rule[1ex]{\textwidth}{1pt}\\[1em]
+    \Rinputif{RSkylInternal/MinorContents\arabic{Rvolume}.tex}
 }
 
 \newcommand{\Rtocline}[5]{%
     \noindent
-    \parbox[t]{#1}{%
+    \hyperlink{#5}{%
+        \parbox[t]{#1}{%
+            \hfill
+            #2
+            \hspace*{2pt}
+        }
+        #3
+        \phantom{\rule[-0.5em]{0pt}{1.5em}}
         \hfill
-        #2
-        \hspace*{2pt}
-    }
-    \hyperlink{#5}{#3}
-    \phantom{\rule[-0.5em]{0pt}{0.5em}}
-    \hfill
-    #4
-    \hspace*{1cm}\\
+        #4
+        \hspace*{1cm}
+    }\\
 }
 
 \newcommand{\Rsectinfo}{%
@@ -81,6 +90,8 @@
     \refstepcounter{Rvolume}
     \setcounter{Rvolumestart}{\value{page}}
     \renewcommand{\Rcurrentvolume}{#1}
+    \immediate\closeout\Rminortocfile
+    \immediate\openout\Rminortocfile=RSkylInternal/MinorContents\arabic{Rvolume}.new
     \immediate\write\Rmajortocfile{%
         \noexpand\Rtocline{1cm}%
         {\Roman{Rvolume}.}%
@@ -111,6 +122,13 @@
     \immediate\write\Rmajortocfile{%
         \noexpand\Rtocline{1.5cm}%
         {\arabic{Rchapter}.}%
+        {#1}%
+        {\arabic{page}}%
+        {RSkyl:C:\Rsectinfo}
+    }
+    \immediate\write\Rminortocfile{%
+        \noexpand\Rtocline{1cm}%
+        {\arabic{Rchapter}.}%
         {\noexpand\textbf{#1}}%
         {\arabic{page}}%
         {RSkyl:C:\Rsectinfo}
@@ -133,8 +151,15 @@
 \newcommand{\Rsection}[1]{%
     \refstepcounter{Rsection}
     \renewcommand{\Rcurrentsection}{#1}
-    \immediate\write\Rmajortocfile{%
-        \noexpand\Rtocline{2cm}%
+    %\immediate\write\Rmajortocfile{%
+    %    \noexpand\Rtocline{2cm}%
+    %    {\arabic{Rsection}.}%
+    %    {#1}%
+    %    {\arabic{page}}%
+    %    {RSkyl:S:\Rsectinfo}%
+    %}
+    \immediate\write\Rminortocfile{%
+        \noexpand\Rtocline{1.5cm}%
         {\arabic{Rsection}.}%
         {#1}%
         {\arabic{page}}%
@@ -154,8 +179,15 @@
 \newcommand{\Rsubsect}[1]{%
     \refstepcounter{Rsubsect}
     \renewcommand{\Rcurrentsubsect}{#1}
-    \immediate\write\Rmajortocfile{%
-        \noexpand\Rtocline{2.5cm}%
+    %\immediate\write\Rmajortocfile{%
+    %    \noexpand\Rtocline{2.5cm}%
+    %    {\roman{Rsubsect}.}%
+    %    {#1}%
+    %    {\arabic{page}}%
+    %    {RSkyl:SS:\Rsectinfo}%
+    %}
+    \immediate\write\Rminortocfile{%
+        \noexpand\Rtocline{2cm}%
         {\roman{Rsubsect}.}%
         {#1}%
         {\arabic{page}}%
@@ -164,8 +196,8 @@
     %
     ~\vspace{1em}\\
     \noindent\hypertarget{RSkyl:SS:\Rsectinfo}%
-    {Sub-Section \roman{Rsubsect}}\\[-1.5ex]
-    \rule{0.2\textwidth}{0.5pt}\\
+    {\textbf{\tiny Sub-Section \roman{Rsubsect}}}\\[-2.0ex]
+    \rule{0.2\textwidth}{0.5pt}\\[-0.5ex]
     {\textbf{#1}}\\[1em]
     \noindent%
 }

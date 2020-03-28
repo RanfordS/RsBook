@@ -31,6 +31,8 @@
     \end{itemize}
 }
 
+\Rmajortoc
+
 \Rvolume{Page Layout}
 
 \layout
@@ -216,13 +218,34 @@ A test of the IPA command \ipa{/ɹʌka/}.
 \begin{align*}
     0 &= \partial_\mu\left|\Rvec{l}(\mu)-\Rvec{p}\right|\\
     \left|\Rvec{l}-\Rvec{p}\right|^2 &= \left|\Rvec{a} + \mu\Rdir{ab} - \Rvec{p}\right|^2\\
-    &=
 \end{align*}
+
+Quaternions are defined by the equation
+\begin{align*}
+    \imath^2 = \jmath^2 = \kappa^2 = \imath\jmath\kappa = -1.
+\end{align*}
+By considering pairs of terms, it is found that:
+\begin{align*}
+    \imath\jmath\kappa &= \imath^2, & \jmath\kappa &= \imath,\\
+    \imath^2 = \jmath\kappa\imath &= \jmath^2, & \kappa\imath &= \jmath,\\
+    \imath\jmath\kappa &= \kappa^2, & \imath\jmath &= \kappa.
+\end{align*}
+By multiplying pairs of terms, it is found that:
+\begin{align*}
+    \imath\jmath^2 = \imath\jmath\jmath = \kappa\jmath = -\imath,\\
+    \imath^2\jmath = \imath\imath\jmath = \imath\kappa = -\jmath,\\
+    \jmath^2\kappa = \jmath\jmath\kappa = \jmath\imath = -\kappa.
+\end{align*}
+Note that the multiplication of quaternions is associative, but not commutative.
+
+Ki\ng\ of \th e dirt.
 
 \newpage
 \Rvolume{Test Volume}
 %
 Some volume text
+
+\Rminortoc
 
 \Rchapter{Test Chapter}
 %
@@ -238,6 +261,5 @@ Some subsection text
 
 %\immediate\write\Rmajortocfile{\noexpand\Rtocline{2cm}{1.}{Test Section}{12}{}}
 %\immediate\write\Rmajortocfile{\noexpand\Rtocline{2.5cm}{1.}{Test Subsection}{12}{}}
-\Rmajortoc
 
 \end{document}
