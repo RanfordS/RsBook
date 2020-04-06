@@ -3,13 +3,13 @@
 \newfontfamily\ipafont{Charis SIL}
 \newcommand\ipa[1]{{\ipafont #1}}
 
-\setmainfont[Path=/home/alex/.fonts/,
-    BoldFont=Palatino-nova-W04-Medium,
-    ItalicFont=Palatino-nova-W04-Light-Italic,
-    BoldItalicFont=Palatino-nova-W04-Medium-Italic,
-    SmallCapsFont=Palatino-nova-W04-Titling,
-    SmallCapsFeatures={
-        Ligatures={
+\setmainfont[
+    BoldFont = Palatino-nova-W04-Medium,
+    ItalicFont = Palatino-nova-W04-Light-Italic,
+    BoldItalicFont = Palatino-nova-W04-Medium-Italic,
+    SmallCapsFont = Palatino-nova-W04-Titling,
+    SmallCapsFeatures = {
+        Ligatures = {
             NoRequired,
             NoCommon,
             NoContextual,
@@ -17,7 +17,11 @@
     },
 ]{Palatino-nova-W04-Light}
 
-\setmonofont[Path=/home/alex/.fonts/]{Monaco}
+\setmonofont[
+    BoldFont = *_B,
+    ItalicFont = *_I,
+    BoldItalicFont = *_BI,
+]{Anonymous_Pro}
 
 \DeclareTextCommandDefault{\nobreakspace}{\leavevmode\nobreak\ }
 

@@ -18,11 +18,10 @@
 \newwrite\Rmajortocfile
 \newwrite\Rminortocfile
 \immediate\openout\Rmajortocfile=RSkylInternal/MajorContents.new
+\immediate\openout\Rminortocfile=RSkylInternal/MinorContents0.new
 \immediate\write\Rmajortocfile{%
     \noexpand\newcommand{\noexpand\Rmajortocincluded}{true}
 }
-%\immediate\closeout\Rmajortocfile
-\immediate\openout\Rminortocfile=RSkylInternal/MinorContents0.new
 
 \newcommand{\Rtitlepage}[4]{%
     \thispagestyle{empty}
@@ -50,11 +49,6 @@
     \noindent\textbf{Table of Contents}\\[1ex]
     \rule[1ex]{\textwidth}{1pt}\\[1em]
     \Rinputif{RSkylInternal/MajorContents.tex}
-    %\lstinputlisting{RSkylInternal/MajorContents.tex}
-    %\ifdefined\Rmajortocincluded
-    %\else
-    %    \TODO{Major ToC (rebuild required)}
-    %\fi
 }
 
 \newcommand{\Rminortoc}{%
@@ -90,6 +84,7 @@
     \refstepcounter{Rvolume}
     \setcounter{Rvolumestart}{\value{page}}
     \renewcommand{\Rcurrentvolume}{#1}
+    %
     \immediate\closeout\Rminortocfile
     \immediate\openout\Rminortocfile=RSkylInternal/MinorContents\arabic{Rvolume}.new
     \immediate\write\Rmajortocfile{%
@@ -119,6 +114,7 @@
     \refstepcounter{Rchapter}
     \setcounter{Rchapterstart}{\value{page}}
     \renewcommand{\Rcurrentchapter}{#1}
+    %
     \immediate\write\Rmajortocfile{%
         \noexpand\Rtocline{1.5cm}%
         {\arabic{Rchapter}.}%
@@ -151,13 +147,7 @@
 \newcommand{\Rsection}[1]{%
     \refstepcounter{Rsection}
     \renewcommand{\Rcurrentsection}{#1}
-    %\immediate\write\Rmajortocfile{%
-    %    \noexpand\Rtocline{2cm}%
-    %    {\arabic{Rsection}.}%
-    %    {#1}%
-    %    {\arabic{page}}%
-    %    {RSkyl:S:\Rsectinfo}%
-    %}
+    %
     \immediate\write\Rminortocfile{%
         \noexpand\Rtocline{1.5cm}%
         {\arabic{Rsection}.}%
@@ -179,13 +169,7 @@
 \newcommand{\Rsubsect}[1]{%
     \refstepcounter{Rsubsect}
     \renewcommand{\Rcurrentsubsect}{#1}
-    %\immediate\write\Rmajortocfile{%
-    %    \noexpand\Rtocline{2.5cm}%
-    %    {\roman{Rsubsect}.}%
-    %    {#1}%
-    %    {\arabic{page}}%
-    %    {RSkyl:SS:\Rsectinfo}%
-    %}
+    %
     \immediate\write\Rminortocfile{%
         \noexpand\Rtocline{2cm}%
         {\roman{Rsubsect}.}%

@@ -9,7 +9,7 @@
 \newcommand{\Rsamplenum}{0123456789}
 \newcommand{\Rsampleall}{\Rsamplefox\\\Rsampleupp\\\Rsamplelow\\\Rsamplenum}
 
-\newwrite\tempfile
+%\newwrite\tempfile
 
 %% TESTING GROUND
 
@@ -35,6 +35,7 @@
 
 \Rvolume{Page Layout}
 
+\newpage
 \layout
 
 \Rvolume{Testing}
@@ -77,17 +78,6 @@ $\mathfrak{\Rsamplelow}$\\$\mathfrak{\Rsamplenum}$
     False
 \fi
 
-
-\newcommand{\what}{why?}
-\protect\input{RSkylToC.tex}
-
-\ifdefined\RSKYLTOCINC
-    The RSkylToC.tex file was complete
-    \lstinputlisting{RSkylToC.tex}
-\else
-    RSkylToc.tex not marked, first pass?
-\fi
-
 Hello World!
 \begin{align*}
     %y_j &= \xi^j
@@ -97,18 +87,6 @@ Hello World!
 
 \TODO{This bit}
 \HIDE{This other bit}
-
-\renewcommand{\what}{what?}
-\newcommand{\What}{\noexpand\what}
-
-\immediate\openout\tempfile=RSkylToC.tex
-\immediate\write\tempfile{\noexpand\newcommand{\noexpand\RSKYLTOCINC}{}}
-\immediate\write\tempfile{this is interesting}
-\immediate\write\tempfile{}
-\immediate\write\tempfile{this is also interesting}
-\immediate\write\tempfile{\noexpand\what{} \what{} \What{}}
-\immediate\write\tempfile{\noexpand\textbf{\noexpand\textit{'cause foo}}}
-\immediate\closeout\tempfile
 
 \newpagerecto
 Hi, Beans!
@@ -176,43 +154,6 @@ A test of the IPA command \ipa{/ɹʌka/}.
     \end{forest}
 \end{center}
 
-%\input{ExampleMusic.tex}
-\begin{music}
-    \parindent10mm
-    \instrumentnumber{1} % a single instrument
-    \setname1{Piano\hspace*{1em}} % whose name is Piano
-    \setstaffs1{2} % with two staffs
-    \generalmeter{\meterfrac44} % 4/4 meter chosen
-    \startextract % starting real score
-        \Notes\ibu0f0\qb0{cge}\tbu0\qb0g|\hl j\en
-        \Notes\ibu0f0\qb0{cge}\tbu0\qb0g|\ql l\sk\ql n\en
-        \bar
-        \Notes\ibu0f0\qb0{dgf}|\qlp i\en
-        \notes\tbu0\qb0g|\ibbl1j3\qb1j\tbl1\qb1k\en
-        \Notes\ibu0f0\qb0{cge}\tbu0\qb0g|\hl j\en
-    \zendextract % terminate excerpt
-\end{music}
-
-\begin{music}
-    \interstaff{13}
-    \instrumentnumber{1}
-    \setstaffs1{2}
-    \setclef1\bass
-    \generalmeter\allabreve
-    \startextract
-        \NOtes\qp\nextstaff\isluru0q\zq{q}\ql{j}\en
-        \bar
-        \nspace
-        \Notes\ibu0a1\qb0{CEJLcL}%
-        \nextstaff\roff{\zw{l}}\pt{p}\zh{_p}\pt{i}\hl{_i}\en
-        \Notes\qb0J\itied1a\qb0a\nextstaff\tslur0o\zq{o}\ql{h}\en
-        \bar
-        \Notes\ttie1\zh{.L.a}\hl{.e}%
-        \nextstaff\qb0{chj}\tbl0\qb0l\cl{q}\ds\en
-        \NOtes\qp\nextstaff\zq{q}\ql{j}\en
-    \endextract
-\end{music}
-
 \Rmusic{lilypondTest}
 
 \begin{align*}
@@ -241,6 +182,10 @@ Note that the multiplication of quaternions is associative, but not commutative.
 Ki\ng\ of \th e dirt.
 
 \newpage
+Code test
+\inputminted{lua}{MakeDoc.lua}
+
+\newpage
 \Rvolume{Test Volume}
 %
 Some volume text
@@ -258,8 +203,5 @@ Some section text
 \Rsubsect{Test Subsect}
 %
 Some subsection text
-
-%\immediate\write\Rmajortocfile{\noexpand\Rtocline{2cm}{1.}{Test Section}{12}{}}
-%\immediate\write\Rmajortocfile{\noexpand\Rtocline{2.5cm}{1.}{Test Subsection}{12}{}}
 
 \end{document}
