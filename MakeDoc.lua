@@ -8,6 +8,7 @@ make_pdf_null = make_pdf.." > /dev/null"
 make_bib_null = make_bib.." > /dev/null"
 
 path_internal = "RSkylInternal/"
+os.execute ("mkdir "..path_internal.." > /dev/null")
 
 print ("\n\27[1;4;33mDoing Repeat Builds\27[0m\n")
 for i = 1, repeats do
