@@ -34,110 +34,18 @@
 
 \Rmajortoc
 
-\Rvolume{Page Layout}
-
 \newpage
-\layout
 
-\Rvolume{Testing}
-\renewcommand{\Rcurrentchapter}{The Testing Ground}
-
-\textbf{Standard} - \Rsampleall
-
-\textbf{Italics} - \textit{\Rsampleall}
-
-\textbf{Bold} - \textbf{\Rsampleall}
-
-\textbf{Bold Italics} - \textbf{\textit{\Rsampleall}}
-
-\textbf{Typewriter} - \texttt{\Rsampleall}
-
-\textbf{Small Caps} - \textsc{\Rsampleall}
-
-\textbf{Math Mode} - $\Rsampleall$
-
-\textbf{Math Calligraphic} - $\mathcal{\Rsampleupp}$
-
-\textbf{Math Backboard} - $\mathbb{\Rsampleupp}$
-
-\textbf{Math Fraktur} - $\mathfrak{\Rsamplefox}$\\$\mathfrak{\Rsampleupp}$\\%
-$\mathfrak{\Rsamplelow}$\\$\mathfrak{\Rsamplenum}$
-
+\Rvolume{Examples}
+\Rminortoc
 
 \newpage
 
-%\textit{wund\textbf{\underline{\u{V}}}de}
+\Rchapter{Linguistics}
 
-\lipsum[1]
-
-\newcounter{alpha}
-\newcounter{gamma}
-\setcounter{gamma}{1}
-\ifnum\value{alpha}=\value{gamma}
-    True
-\else
-    False
-\fi
-
-Hello World!
-\begin{align*}
-    %y_j &= \xi^j
-    B_n(t) &= \sum_{i=0}^{n} \begin{pmatrix} n \\ i \end{pmatrix} t^i
-        \left(\sum_{j=0}^{i} \begin{pmatrix} i \\ j \end{pmatrix} x_j(-1)^{i-j}\right)
-\end{align*}
-
-\TODO{This bit}
-\HIDE{This other bit}
-
-\newpagerecto
-Hi, Beans!
-\newpageverso
-Go away\dots
-
-\newpage
-This is the start of some text:
-\begin{enumerate}
-    \item enumeration item number one;
-    \item another item,
-        \begin{enumerate}
-            \item nested enumerate,
-            \item more stuff;
-        \end{enumerate}
-    \item ``A can o' beans.''
-\end{enumerate}
-More text that follows after it:
-\begin{itemize}
-    \item itemize item number one;
-    \item another item,
-        \begin{itemize}
-            \item nested itemize,
-            \item more stuff;
-        \end{itemize}
-    \item ``No more beans for you...''
-\end{itemize}
-\lipsum[2]
-\begin{multicols}{2}
-    \lipsum[3]
-\end{multicols}
-\begin{enumerate}
-    \item alpha \label{alpha}
-        \begin{enumerate}
-            \item beta \label{beta}
-                \begin{enumerate}
-                    \item gamma \label{gamma}
-                \end{enumerate}
-        \end{enumerate}
-\end{enumerate}
-alpha \ref{alpha},
-beta \ref{beta},
-gamma \ref{gamma}.
-
-\noindent Alla nasa ero monite\\
-Alla nasa ero monite\\
-polo Anne jena golly quack\\
-polo Anne jena golly quack\\
-
-A test of the IPA command \ipa{/ɹʌka/}.
+Phonetic transcriptions should use the \verb|\ipa| command, i.e. \ipa{/ɹʌka/}.
+Use the forest environment with the linguistics default and the syntax setting
+to create syntax trees, such as:
 \begin{center}
     \forestapplylibrarydefaults{linguistics}
     \begin{forest}
@@ -158,7 +66,128 @@ A test of the IPA command \ipa{/ɹʌka/}.
     \end{forest}
 \end{center}
 
-\Rmusic{lilypondTest}
+\newpage
+
+\Rchapter{Music}
+
+All music transcriptions should be written in their own file, and included using
+the \verb|\Rmusic| command.
+Music transcriptions are processed by lilypond.
+\begin{center}
+    \Rmusic{lilypondTest}
+\end{center}
+
+\newpage
+
+\Rchapter{Code}
+
+Code imports handled by minted.
+\inputminted{lua}{Rinputif.lua}
+
+\newpage
+
+\Rchapter{Fonts}
+
+\begin{multicols}{2}
+    \noindent\textbf{Standard}\\
+    \rule[1ex]{4cm}{1pt}\\
+    \Rsampleupp\\
+    \Rsamplelow\\
+    \Rsamplenum
+
+    \noindent\textbf{Italics}\\
+    \rule[1ex]{4cm}{1pt}\\
+    \textit{\Rsampleupp}\\
+    \textit{\Rsamplelow}\\
+    \textit{\Rsamplenum}
+
+    \noindent\textbf{Bold}\\
+    \rule[1ex]{4cm}{1pt}\\
+    \textbf{\Rsampleupp}\\
+    \textbf{\Rsamplelow}\\
+    \textbf{\Rsamplenum}
+
+    \noindent\textbf{Bold Italics}\\
+    \rule[1ex]{4cm}{1pt}\\
+    \textbf{\textit{\Rsampleupp}}\\
+    \textbf{\textit{\Rsamplelow}}\\
+    \textbf{\textit{\Rsamplenum}}
+
+    \noindent\textbf{Typewritter}\\
+    \rule[1ex]{4cm}{1pt}\\
+    \texttt{\Rsampleupp}\\
+    \texttt{\Rsamplelow}\\
+    \texttt{\Rsamplenum}
+
+\columnbreak
+
+    \noindent\textbf{Small Caps}\\
+    \rule[1ex]{4cm}{1pt}\\
+    \textsc{\Rsampleupp}\\
+    \textsc{\Rsamplelow}\\
+    \textsc{\Rsamplenum}
+
+    \noindent\textbf{Math Mode}\\
+    \rule[1ex]{4cm}{1pt}\\
+    $\Rsampleupp$\\
+    $\Rsamplelow$\\
+    $\Rsamplenum$
+
+    \noindent\textbf{Math Fraktur}\\
+    \rule[1ex]{4cm}{1pt}\\
+    $\mathfrak{\Rsampleupp}$\\
+    $\mathfrak{\Rsamplelow}$\\
+    $\mathfrak{\Rsamplenum}$
+
+    \noindent\textbf{Math Calligraphic}\\
+    \rule[1ex]{4cm}{1pt}\\
+    $\mathcal{\Rsampleupp}$
+
+    \noindent\textbf{Math Backboard}\\
+    \rule[1ex]{4cm}{1pt}\\
+    $\mathbb{\Rsampleupp}$
+
+    \noindent\textbf{IPA}\\
+    \rule[1ex]{4cm}{1pt}\\
+    \ipa{\Rsampleupp}\\
+    \ipa{\Rsamplelow}\\
+    \ipa{\Rsamplenum}
+\end{multicols}
+
+\newpage
+
+\Rchapter{Maths}
+
+Denote vectors, direction vectors, and matrices with \verb|\Rvec|, \verb|\Rdir|,
+and \verb|\Rmat|.
+\[
+    \Rvec{x} = \Rmat{M}\cdot\Rdir{ab}.
+\]
+Differentiation with \verb|Rdiff|, \verb|\Rpdiff|, and \verb|\RDiff|
+\begin{align*}
+    \Rdiff{y}{x} &= \Rdiff[2]{y}{x}\\
+    \Rpdiff{y}{x} &= \Rpdiff[2]{y}{x}\\
+    \RDiff{y}{x} &= \RDiff[2]{y}{x}
+\end{align*}
+
+\newpage
+
+\Rvolume{Commands}
+
+\newpage
+
+\Rvolume{Scatter}
+
+\newpage
+\layout
+
+\Rchapter{Testing}
+
+Hello World!
+\begin{align*}
+    B_n(t) &= \sum_{i=0}^{n} \begin{pmatrix} n \\ i \end{pmatrix} t^i
+        \left(\sum_{j=0}^{i} \begin{pmatrix} i \\ j \end{pmatrix} x_j(-1)^{i-j}\right)
+\end{align*}
 
 \begin{align*}
     0 &= \partial_\mu\left|\Rvec{l}(\mu)-\Rvec{p}\right|\\
@@ -185,27 +214,6 @@ Note that the multiplication of quaternions is associative, but not commutative.
 
 Ki\ng\ of \th e dirt.
 
-\newpage
-Code test
-\inputminted{lua}{MakeDoc.lua}
-
-\newpage
-\Rvolume{Test Volume}
-%
-Some volume text
-
-\Rminortoc
-
-\Rchapter{Test Chapter}
-%
-Some chapter text
-
-\Rsection{Test Section}
-%
-Some section text
-
-\Rsubsect{Test Subsect}
-%
-Some subsection text
+\lipsum[1-4]
 
 \end{document}

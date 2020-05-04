@@ -32,4 +32,22 @@
 \newcommand{\Rmat}[1]{\Rdoubleunderline{\ensuremath{#1}}}
 \newcommand{\Rdir}[1]{\Runderarrow{\ensuremath{#1}}}
 
+\newcommand{\Rdiff}[3][]{%
+    \ifthenelse{\equal{#1}{}}%
+        {\frac{d #2}{d #3}}%
+        {\frac{d^{#1} #2}{d #3^{#1}}}%
+}
+
+\newcommand{\Rpdiff}[3][]{%
+    \ifthenelse{\equal{#1}{}}%
+        {\frac{\partial #2}{\partial #3}}%
+        {\frac{\partial^{#1} #2}{\partial #3^{#1}}}%
+}
+
+\newcommand{\RDiff}[3][]{%
+    \ifthenelse{\equal{#1}{}}%
+        {\frac{D #2}{D #3}}%
+        {\frac{D^{#1} #2}{D #3^{#1}}}%
+}
+
 %% End
