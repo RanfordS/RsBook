@@ -14,6 +14,13 @@
 \renewcommand{\theRvolume}{\Roman{Rvolume}}
 \renewcommand{\theRchapter}{\arabic{Rchapter}}
 
+\newlength{\Rvolpre}\setlength{\Rvolpre}{1in}
+\newlength{\Rchppre}\setlength{\Rchppre}{1cm}
+\newlength{\Rsecpre}\setlength{\Rsecpre}{1cm}
+\newlength{\Rsecpro}\setlength{\Rsecpro}{1cm}
+\newlength{\Rsubpre}\setlength{\Rsubpre}{1em}
+\newlength{\Rsubpro}\setlength{\Rsubpro}{1em}
+
 % toc file streams
 \newwrite\Rmajortocfile
 \newwrite\Rminortocfile
@@ -100,7 +107,7 @@
     \setcounter{Rsubsect}{0}
     %
     \thispagestyle{empty}
-    ~\vspace{1in}
+    ~\vspace{\Rvolpre}
     \begin{center}
         \hypertarget{RSkyl:V:\Rsectinfo}%
         {\large\textbf{Volume \Roman{Rvolume}}}\\
@@ -134,7 +141,7 @@
     \setcounter{Rsubsect}{0}
     %
     \thispagestyle{empty}
-    ~\vspace{1cm}
+    ~\vspace{\Rchppre}
     \begin{center}
         \hypertarget{RSkyl:C:\Rsectinfo}%
         {\textbf{Chapter \arabic{Rchapter}}}\\
@@ -158,11 +165,11 @@
     %
     \setcounter{Rsubsect}{0}
     %
-    ~\vspace{1cm}\\
+    ~\vspace{\Rsecpre}\\
     \noindent\hypertarget{RSkyl:S:\Rsectinfo}%
     {\textbf{Section \arabic{Rsection}}}\\[-1.5ex]
     \rule{0.3\textwidth}{0.5pt}\\
-    {\large\textbf{#1}}\\[1cm]
+    {\large\textbf{#1}}\\[\Rsecpro]
     \noindent%
 }
 
@@ -178,11 +185,11 @@
         {RSkyl:SS:\Rsectinfo}%
     }
     %
-    ~\vspace{1em}\\
+    ~\vspace{\Rsecpre}\\
     \noindent\hypertarget{RSkyl:SS:\Rsectinfo}%
     {\textbf{\tiny Sub-Section \roman{Rsubsect}}}\\[-2.0ex]
     \rule{0.2\textwidth}{0.5pt}\\[-0.5ex]
-    {\textbf{#1}}\\[1em]
+    {\textbf{#1}}\\[\Rsecpro]
     \noindent%
 }
 
