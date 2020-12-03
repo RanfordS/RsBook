@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2020.3.11)  3 DEC 2020 23:05
+This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2020.3.11)  3 DEC 2020 23:19
  \write18 enabled.
 **Main.tex
 (./Main.tex
@@ -2233,11 +2233,11 @@ luaotfload | load : Lookup/name: "CharisSIL" -> "CharisSIL-R.ttf" [4] (./RSkylI
 nternal/lilypondTest.tex
 (./RSkylInternal/61/lily-1ab8b9f1-systems.tex
 Package epstopdf Info: Source file: <RSkylInternal/61/lily-1ab8b9f1-1.eps>
-(epstopdf)                    date: 2020-12-03 23:05:52
+(epstopdf)                    date: 2020-12-03 23:19:07
 (epstopdf)                    size: 193098 bytes
 (epstopdf)             Output file: <RSkylInternal/61/lily-1ab8b9f1-1-eps-conver
 ted-to.pdf>
-(epstopdf)                    date: 2020-12-03 23:05:52
+(epstopdf)                    date: 2020-12-03 23:19:07
 (epstopdf)                    size: 18056 bytes
 (epstopdf)             Command: <epstopdf --outfile=RSkylInternal/61/lily-1ab8b9
 f1-1-eps-converted-to.pdf RSkylInternal/61/lily-1ab8b9f1-1.eps>
@@ -2380,7 +2380,7 @@ Package rerunfilecheck Info: File `RSkyl.out' has not changed.
 Here is how much of LuaTeX's memory you used:
  58231 strings out of 495004
  125171,1648299 words of node,token memory allocated
- 611 words of node memory still in use:
+ 594 words of node memory still in use:
    10 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 9 attribute, 72 glue_spec, 9 attri
 bute_list, 1 write nodes
    avail lists: 2:2147,3:675,4:957,5:197,6:2341,7:202,8:12,9:400,10:210
@@ -2408,7 +2408,7 @@ onts/euler/eusm10.pfb><</usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/latxfont/lcircle1.pfb><</usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/latxfont/line10.pfb><</usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/symbols/msbm10.pfb>
-Output written on RSkyl.pdf (14 pages, 286884 bytes).
+Output written on RSkyl.pdf (14 pages, 286853 bytes).
 
 PDF statistics: 244 PDF objects out of 1000 (max. 8388607)
  181 compressed objects within 2 object streams

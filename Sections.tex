@@ -70,20 +70,22 @@
     \noindent
     \hyperlink{#5}{%
         \parbox[t]{#1}{%
-            \hfill
-            #2
-            \hspace*{2pt}
+            \hfill%
+            #2%
+            \rule{0pt}{1em}%
+            \hspace*{2pt}%
         }
         \setlength{\Rtoclen}{\textwidth}%
         \addtolength{\Rtoclen}{-#1}%
         \addtolength{\Rtoclen}{-2cm}%
         \parbox[t]{\Rtoclen}{%
-            #3
-            \phantom{\rule[-0.5em]{0pt}{1.5em}}
+            \raggedright%
+            #3%
+            \rule[-0.5em]{0pt}{0.5em}%
         }
-        \hfill
-        #4
-        \hspace*{1cm}
+        \hfill%
+        #4%
+        \hspace*{1cm}%
     }\\
 }
 
