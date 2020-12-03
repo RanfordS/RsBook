@@ -26,35 +26,27 @@
     \draw (L) -- (R) -- ++(-0.3ex,-0.3ex);
 \end{tikzpicture}
 }
+\def\RMstyleD{\displaystyle}
+\def\RMstyleT{\textstyle}
+\def\RMstyleS{\scriptstyle}
+\def\RMstyles{\scriptscriptstyle}
+\def\RMsavedstyle{\csname RMstyle\RMstylecase\endcsname}
 
-%\newcommand{\Rvec}[1]{\Runderline{\ensuremath{#1}}}
-%\newcommand{\Rmat}[1]{\Rdoubleunderline{\ensuremath{#1}}}
-%\newcommand{\Rdir}[1]{\Runderarrow{\ensuremath{#1}}}
+\newcommand{\RMthisstyle}[1]%
+{%
+    \mathchoice%
+    {\edef\RMstylecase{D}#1}%
+    {\edef\RMstylecase{T}#1}%
+    {\edef\RMstylecase{S}#1}%
+    {\edef\RMstylecase{s}#1}%
+}
 
 \newcommand{\Rvec}[1]%
-{%
-    \mathchoice%
-    {\Runderline{\ensuremath{\displaystyle #1}}}%
-    {\Runderline{\ensuremath{\textstyle #1}}}%
-    {\Runderline{\ensuremath{\scriptstyle #1}}}%
-    {\Runderline{\ensuremath{\scriptscriptstyle #1}}}%
-}
+{\RMthisstyle{\Runderline{\ensuremath{\RMsavedstyle#1}}}}
 \newcommand{\Rmat}[1]%
-{%
-    \mathchoice%
-    {\Rdoubleunderline{\ensuremath{\displaystyle #1}}}%
-    {\Rdoubleunderline{\ensuremath{\textstyle #1}}}%
-    {\Rdoubleunderline{\ensuremath{\scriptstyle #1}}}%
-    {\Rdoubleunderline{\ensuremath{\scriptscriptstyle #1}}}%
-}
+{\RMthisstyle{\Rdoubleunderline{\ensuremath{\RMsavedstyle#1}}}}
 \newcommand{\Rdir}[1]%
-{%
-    \mathchoice%
-    {\Runderarrow{\ensuremath{\displaystyle #1}}}%
-    {\Runderarrow{\ensuremath{\textstyle #1}}}%
-    {\Runderarrow{\ensuremath{\scriptstyle #1}}}%
-    {\Runderarrow{\ensuremath{\scriptscriptstyle #1}}}%
-}
+{\RMthisstyle{\Runderarrow{\ensuremath{\RMsavedstyle#1}}}}
 
 \newcommand{\Rdiff}[3][]{%
     \ifthenelse{\equal{#1}{}}%
