@@ -64,6 +64,8 @@
     \Rinputif{RSkylInternal/MinorContents\arabic{Rvolume}.tex}
 }
 
+\newlength{\Rtoclen}%
+
 \newcommand{\Rtocline}[5]{%
     \noindent
     \hyperlink{#5}{%
@@ -72,8 +74,13 @@
             #2
             \hspace*{2pt}
         }
-        #3
-        \phantom{\rule[-0.5em]{0pt}{1.5em}}
+        \setlength{\Rtoclen}{\textwidth}%
+        \addtolength{\Rtoclen}{-#1}%
+        \addtolength{\Rtoclen}{-2cm}%
+        \parbox[t]{\Rtoclen}{%
+            #3
+            \phantom{\rule[-0.5em]{0pt}{1.5em}}
+        }
         \hfill
         #4
         \hspace*{1cm}
